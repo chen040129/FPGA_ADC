@@ -1,0 +1,69 @@
+module uart(
+	input RST_clk,
+	input uart_rx_data,
+	input RST_n,
+	output reg uart_over,
+	
+);
+
+
+parameter all_bit=10;
+parameter stop_bit=1;
+parameter start_bit=0;
+
+wire uart_clk_tx;
+wire uart_clk_Rx;
+
+
+reg [8-1:0] cnt;//用于计算寄存位的计算器
+reg [all_bit-1:0] data;//用于存储数据，避免移位使得数据丢失
+
+
+clk(
+	.rst		(RST_n),
+	.clk		(RST_clk),
+	.clk_out	(uart_clk_tx)
+); 
+
+initial 
+begin
+	output_data[0]=start_bit;
+	output_data[9]=stop_bit;
+	data<=output_data;
+	test=output_data;
+	uart_tx_data<=1'b1;
+	uart_over<=0;
+end//初始化传输引脚，和传输数据
+
+//always @(posedge RST_clk)
+//begin
+//	my_RST_time<=RST_clk;
+//	my_time<=uart_clk_tx;
+//end//传输时钟信号，检测时钟是否正确
+
+
+always @(posedge uart_clk_tx)
+begin
+	if(!RST_n)
+	begin
+		uart_tx_data<=1'b1;
+	end
+	else
+	begin
+	if(cnt<8'd9)begin
+			uart_tx_data<=output_data[0];
+			output_data<=output_data>>1;
+			cnt<=cnt+1'b1;
+			uart_over<=0;
+		end
+		else
+		begin
+			uart_tx_data<=uart_tx_data;
+			output_data<=data;
+			cnt<=0;
+			uart_over<=1;
+		end
+	end
+end
+
+endmodule

@@ -1,0 +1,10 @@
+module uart(
+	input uart_clk_rx,
+	input uart_clk_tx,
+	input uart_rx_data,
+	output uart_tx_data
+);
+
+
+parameter all_bnit 8;
+parameter 

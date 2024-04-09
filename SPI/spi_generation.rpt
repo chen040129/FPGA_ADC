@@ -1,0 +1,33 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate E:\FPGA_FILE\MY_UART\spi.qsys --block-symbol-file --output-directory=E:\FPGA_FILE\MY_UART\spi --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading MY_UART/spi.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.0]
+Progress: Parameterizing module clk_0
+Progress: Adding spislave_0 [spislave 18.0]
+Progress: Parameterizing module spislave_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate E:\FPGA_FILE\MY_UART\spi.qsys --synthesis=VERILOG --output-directory=E:\FPGA_FILE\MY_UART\spi\synthesis --family="Cyclone IV E" --part=EP4CE10F17C8
+Progress: Loading MY_UART/spi.qsys
+Progress: Reading input file
+Progress: Adding clk_0 [clock_source 18.0]
+Progress: Parameterizing module clk_0
+Progress: Adding spislave_0 [spislave 18.0]
+Progress: Parameterizing module spislave_0
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: spi: Generating spi "spi" for QUARTUS_SYNTH
+Info: spislave_0: "spi" instantiated spislave "spislave_0"
+Info: rst_controller: "spi" instantiated altera_reset_controller "rst_controller"
+Info: spi: Done "spi" with 3 modules, 5 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis

@@ -1,0 +1,5 @@
+
+State Machine - |uart|state
+Name state.state_send 
+state.state_wait 0 
+state.state_send 1 

@@ -1,0 +1,148 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 544 304)
+	(text "spi" (rect 264 -1 274 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 288 20 300)(font "Arial" ))
+	(port
+		(pt 0 72)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 61 46 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 224 72)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "reset_reset_n" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "reset_reset_n" (rect 4 101 82 112)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 224 112)(line_width 1))
+	)
+	(port
+		(pt 0 152)
+		(input)
+		(text "spislave_0_stsinkvalid" (rect 0 0 88 12)(font "Arial" (font_size 8)))
+		(text "spislave_0_stsinkvalid" (rect 4 141 136 152)(font "Arial" (font_size 8)))
+		(line (pt 0 152)(pt 224 152)(line_width 1))
+	)
+	(port
+		(pt 0 168)
+		(input)
+		(text "spislave_0_stsinkdata[7..0]" (rect 0 0 107 12)(font "Arial" (font_size 8)))
+		(text "spislave_0_stsinkdata[7..0]" (rect 4 157 166 168)(font "Arial" (font_size 8)))
+		(line (pt 0 168)(pt 224 168)(line_width 3))
+	)
+	(port
+		(pt 544 72)
+		(input)
+		(text "spislave_0_stsourceready" (rect 0 0 106 12)(font "Arial" (font_size 8)))
+		(text "spislave_0_stsourceready" (rect 411 61 555 72)(font "Arial" (font_size 8)))
+		(line (pt 544 72)(pt 304 72)(line_width 1))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "spislave_0_mosi" (rect 0 0 67 12)(font "Arial" (font_size 8)))
+		(text "spislave_0_mosi" (rect 4 213 94 224)(font "Arial" (font_size 8)))
+		(line (pt 0 224)(pt 224 224)(line_width 1))
+	)
+	(port
+		(pt 0 240)
+		(input)
+		(text "spislave_0_nss" (rect 0 0 62 12)(font "Arial" (font_size 8)))
+		(text "spislave_0_nss" (rect 4 229 88 240)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 224 240)(line_width 1))
+	)
+	(port
+		(pt 0 272)
+		(input)
+		(text "spislave_0_sclk" (rect 0 0 63 12)(font "Arial" (font_size 8)))
+		(text "spislave_0_sclk" (rect 4 261 94 272)(font "Arial" (font_size 8)))
+		(line (pt 0 272)(pt 224 272)(line_width 1))
+	)
+	(port
+		(pt 0 184)
+		(output)
+		(text "spislave_0_stsinkready" (rect 0 0 94 12)(font "Arial" (font_size 8)))
+		(text "spislave_0_stsinkready" (rect 4 173 136 184)(font "Arial" (font_size 8)))
+		(line (pt 0 184)(pt 224 184)(line_width 1))
+	)
+	(port
+		(pt 544 88)
+		(output)
+		(text "spislave_0_stsourcevalid" (rect 0 0 100 12)(font "Arial" (font_size 8)))
+		(text "spislave_0_stsourcevalid" (rect 417 77 561 88)(font "Arial" (font_size 8)))
+		(line (pt 544 88)(pt 304 88)(line_width 1))
+	)
+	(port
+		(pt 544 104)
+		(output)
+		(text "spislave_0_stsourcedata[7..0]" (rect 0 0 119 12)(font "Arial" (font_size 8)))
+		(text "spislave_0_stsourcedata[7..0]" (rect 394 93 568 104)(font "Arial" (font_size 8)))
+		(line (pt 544 104)(pt 304 104)(line_width 3))
+	)
+	(port
+		(pt 0 256)
+		(bidir)
+		(text "spislave_0_miso" (rect 0 0 67 12)(font "Arial" (font_size 8)))
+		(text "spislave_0_miso" (rect 4 245 94 256)(font "Arial" (font_size 8)))
+		(line (pt 0 256)(pt 224 256)(line_width 1))
+	)
+	(drawing
+		(text "clk" (rect 209 43 436 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 229 67 476 144)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 195 83 420 179)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 229 107 500 224)(font "Arial" (color 0 0 0)))
+		(text "spislave_0_avalon_streaming_sink" (rect 20 123 232 259)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "valid" (rect 229 147 488 304)(font "Arial" (color 0 0 0)))
+		(text "data" (rect 229 163 482 336)(font "Arial" (color 0 0 0)))
+		(text "ready" (rect 229 179 488 368)(font "Arial" (color 0 0 0)))
+		(text "spislave_0_avalon_streaming_source" (rect 305 43 814 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "ready" (rect 276 67 582 144)(font "Arial" (color 0 0 0)))
+		(text "valid" (rect 281 83 592 176)(font "Arial" (color 0 0 0)))
+		(text "data" (rect 283 99 590 208)(font "Arial" (color 0 0 0)))
+		(text "spislave_0_export_0" (rect 104 195 322 403)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "mosi" (rect 229 219 482 448)(font "Arial" (color 0 0 0)))
+		(text "nss" (rect 229 235 476 480)(font "Arial" (color 0 0 0)))
+		(text "miso" (rect 229 251 482 512)(font "Arial" (color 0 0 0)))
+		(text "sclk" (rect 229 267 482 544)(font "Arial" (color 0 0 0)))
+		(text " spi " (rect 529 288 1088 586)(font "Arial" ))
+		(line (pt 224 32)(pt 304 32)(line_width 1))
+		(line (pt 304 32)(pt 304 288)(line_width 1))
+		(line (pt 224 288)(pt 304 288)(line_width 1))
+		(line (pt 224 32)(pt 224 288)(line_width 1))
+		(line (pt 225 52)(pt 225 76)(line_width 1))
+		(line (pt 226 52)(pt 226 76)(line_width 1))
+		(line (pt 225 92)(pt 225 116)(line_width 1))
+		(line (pt 226 92)(pt 226 116)(line_width 1))
+		(line (pt 225 132)(pt 225 188)(line_width 1))
+		(line (pt 226 132)(pt 226 188)(line_width 1))
+		(line (pt 303 52)(pt 303 108)(line_width 1))
+		(line (pt 302 52)(pt 302 108)(line_width 1))
+		(line (pt 225 204)(pt 225 276)(line_width 1))
+		(line (pt 226 204)(pt 226 276)(line_width 1))
+		(line (pt 0 0)(pt 544 0)(line_width 1))
+		(line (pt 544 0)(pt 544 304)(line_width 1))
+		(line (pt 0 304)(pt 544 304)(line_width 1))
+		(line (pt 0 0)(pt 0 304)(line_width 1))
+	)
+)

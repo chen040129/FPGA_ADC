@@ -1,0 +1,22 @@
+# system info UART on 2024.04.06.17:10:53
+system_info:
+name,value
+DEVICE,EP4CE10F17C8
+DEVICE_FAMILY,Cyclone IV E
+GENERATION_ID,1712394649
+#
+#
+# Files generated for UART on 2024.04.06.17:10:53
+files:
+filepath,kind,attributes,module,is_top
+simulation/UART.v,VERILOG,,UART,true
+simulation/submodules/altera_up_rs232_counters.v,VERILOG,,UART_rs232_0,false
+simulation/submodules/altera_up_rs232_in_deserializer.v,VERILOG,,UART_rs232_0,false
+simulation/submodules/altera_up_rs232_out_serializer.v,VERILOG,,UART_rs232_0,false
+simulation/submodules/altera_up_sync_fifo.v,VERILOG,,UART_rs232_0,false
+simulation/submodules/UART_rs232_0.v,VERILOG,,UART_rs232_0,false
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+UART.rs232_0,UART_rs232_0
