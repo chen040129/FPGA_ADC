@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2024.04.09.18:47:35"
+ date="2024.04.12.18:52:23"
  outputDirectory="E:/FPGA_FILE/MY_UART/db/ip/unnamed/">
  <perimeter>
   <parameter
@@ -133,13 +133,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="unnamed:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE10F17C8,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1712659650,AUTO_UNIQUE_ID=(clock_source:18.0:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(altera_up_avalon_rs232:17.1:AUTO_CLK_CLOCK_RATE=50000000,AUTO_DEVICE_FAMILY=Cyclone IV E,avalon_bus_type=Streaming,baud=115200,data_bits=8,parity=None,ref_clk_freq=5.0E7,stop_bits=1)(clock:18.0:)(reset:18.0:)"
+   parameterizationKey="unnamed:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE10F17C8,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1712919140,AUTO_UNIQUE_ID=(clock_source:18.0:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(altera_up_avalon_rs232:17.1:AUTO_CLK_CLOCK_RATE=50000000,AUTO_DEVICE_FAMILY=Cyclone IV E,avalon_bus_type=Streaming,baud=115200,data_bits=8,parity=None,ref_clk_freq=5.0E7,stop_bits=1)(clock:18.0:)(reset:18.0:)"
    instancePathKey="unnamed"
    kind="unnamed"
    version="1.0"
    name="unnamed">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1712659650" />
+  <parameter name="AUTO_GENERATION_ID" value="1712919140" />
   <parameter name="AUTO_DEVICE" value="EP4CE10F17C8" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />

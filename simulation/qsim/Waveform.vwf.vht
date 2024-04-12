@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "04/09/2024 15:46:13"
+-- Generated on "04/11/2024 18:42:15"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          uart_tx
 -- 
@@ -38,13 +38,15 @@ SIGNAL RST_n : STD_LOGIC;
 SIGNAL tx_data : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL uart_over : STD_LOGIC;
 SIGNAL uart_tx_data : STD_LOGIC;
+SIGNAL uart_wire : STD_LOGIC;
 COMPONENT uart_tx
 	PORT (
 	RST_clk : IN STD_LOGIC;
 	RST_n : IN STD_LOGIC;
 	tx_data : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 	uart_over : OUT STD_LOGIC;
-	uart_tx_data : OUT STD_LOGIC
+	uart_tx_data : OUT STD_LOGIC;
+	uart_wire : OUT STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
@@ -55,7 +57,8 @@ BEGIN
 	RST_n => RST_n,
 	tx_data => tx_data,
 	uart_over => uart_over,
-	uart_tx_data => uart_tx_data
+	uart_tx_data => uart_tx_data,
+	uart_wire => uart_wire
 	);
 
 -- RST_clk
@@ -63,9 +66,9 @@ t_prcs_RST_clk: PROCESS
 BEGIN
 LOOP
 	RST_clk <= '0';
-	WAIT FOR 5000 ps;
+	WAIT FOR 2500 ps;
 	RST_clk <= '1';
-	WAIT FOR 5000 ps;
+	WAIT FOR 2500 ps;
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_RST_clk;
@@ -74,14 +77,14 @@ END PROCESS t_prcs_RST_clk;
 t_prcs_RST_n: PROCESS
 BEGIN
 	RST_n <= '0';
-	WAIT FOR 140000 ps;
+	WAIT FOR 190000 ps;
 	RST_n <= '1';
 WAIT;
 END PROCESS t_prcs_RST_n;
 -- tx_data[7]
 t_prcs_tx_data_7: PROCESS
 BEGIN
-	tx_data(7) <= '0';
+	tx_data(7) <= '1';
 WAIT;
 END PROCESS t_prcs_tx_data_7;
 -- tx_data[6]
@@ -93,7 +96,7 @@ END PROCESS t_prcs_tx_data_6;
 -- tx_data[5]
 t_prcs_tx_data_5: PROCESS
 BEGIN
-	tx_data(5) <= '0';
+	tx_data(5) <= '1';
 WAIT;
 END PROCESS t_prcs_tx_data_5;
 -- tx_data[4]
@@ -105,7 +108,7 @@ END PROCESS t_prcs_tx_data_4;
 -- tx_data[3]
 t_prcs_tx_data_3: PROCESS
 BEGIN
-	tx_data(3) <= '0';
+	tx_data(3) <= '1';
 WAIT;
 END PROCESS t_prcs_tx_data_3;
 -- tx_data[2]
@@ -117,7 +120,7 @@ END PROCESS t_prcs_tx_data_2;
 -- tx_data[1]
 t_prcs_tx_data_1: PROCESS
 BEGIN
-	tx_data(1) <= '0';
+	tx_data(1) <= '1';
 WAIT;
 END PROCESS t_prcs_tx_data_1;
 -- tx_data[0]

@@ -7,10 +7,10 @@
 vlib work
 vcom -work work uart.vho
 vcom -work work Waveform.vwf.vht
-vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.uart_vhd_vec_tst
+vsim -novopt -c -t 1ps -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.uart_tx_vhd_vec_tst
 vcd file -direction uart.msim.vcd
-vcd add -internal uart_vhd_vec_tst/*
-vcd add -internal uart_vhd_vec_tst/i1/*
+vcd add -internal uart_tx_vhd_vec_tst/*
+vcd add -internal uart_tx_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -20,24 +20,15 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
-
-
-
-
-
-
-
-
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
 vcom -work work uart.vho
 vcom -work work Waveform.vwf.vht
-vsim -novopt -c -t 1ps -sdfmax uart_vhd_vec_tst/i1=uart_vhd.sdo -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.uart_vhd_vec_tst
+vsim -novopt -c -t 1ps -sdfmax uart_tx_vhd_vec_tst/i1=uart_vhd.sdo -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.uart_tx_vhd_vec_tst
 vcd file -direction uart.msim.vcd
-vcd add -internal uart_vhd_vec_tst/*
-vcd add -internal uart_vhd_vec_tst/i1/*
+vcd add -internal uart_tx_vhd_vec_tst/*
+vcd add -internal uart_tx_vhd_vec_tst/i1/*
 proc simTimestamp {} {
     echo "Simulation time: $::now ps"
     if { [string equal running [runStatus]] } {
@@ -47,15 +38,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
-
-
-
-
-
-
-
-
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
@@ -223,6 +205,16 @@ SIGNAL("uart_tx_data")
 	PARENT = "";
 }
 
+SIGNAL("uart_wire")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
 TRANSITION_LIST("RST_clk")
 {
 	NODE
@@ -230,9 +222,9 @@ TRANSITION_LIST("RST_clk")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 100;
-			LEVEL 0 FOR 5.0;
-			LEVEL 1 FOR 5.0;
+			REPEAT = 200;
+			LEVEL 0 FOR 2.5;
+			LEVEL 1 FOR 2.5;
 		}
 	}
 }
@@ -242,8 +234,8 @@ TRANSITION_LIST("RST_n")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 140.0;
-		LEVEL 1 FOR 860.0;
+		LEVEL 0 FOR 190.0;
+		LEVEL 1 FOR 810.0;
 	}
 }
 
@@ -252,7 +244,7 @@ TRANSITION_LIST("tx_data[7]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -270,7 +262,7 @@ TRANSITION_LIST("tx_data[5]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -288,7 +280,7 @@ TRANSITION_LIST("tx_data[3]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -306,7 +298,7 @@ TRANSITION_LIST("tx_data[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		LEVEL 1 FOR 1000.0;
 	}
 }
 
@@ -337,6 +329,15 @@ TRANSITION_LIST("uart_tx_data")
 	}
 }
 
+TRANSITION_LIST("uart_wire")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
+	}
+}
+
 DISPLAY_LINE
 {
 	CHANNEL = "RST_clk";
@@ -358,7 +359,7 @@ DISPLAY_LINE
 DISPLAY_LINE
 {
 	CHANNEL = "tx_data";
-	EXPAND_STATUS = COLLAPSED;
+	EXPAND_STATUS = EXPANDED;
 	RADIX = Binary;
 	TREE_INDEX = 2;
 	TREE_LEVEL = 0;
@@ -460,6 +461,15 @@ DISPLAY_LINE
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 12;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "uart_wire";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 13;
 	TREE_LEVEL = 0;
 }
 

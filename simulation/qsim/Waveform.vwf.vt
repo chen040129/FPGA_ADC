@@ -18,47 +18,93 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/06/2024 14:22:45"
+// Generated on "04/11/2024 18:41:54"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          clk
+// Verilog Test Bench (with test vectors) for design :                          uart_tx
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module clk_vlg_vec_tst();
+module uart_tx_vlg_vec_tst();
 // constants                                           
 // general purpose registers
-reg clk;
-reg rst;
+reg RST_clk;
+reg RST_n;
+reg [7:0] tx_data;
 // wires                                               
-wire clk_out;
+wire uart_over;
+wire uart_tx_data;
+wire uart_wire;
 
 // assign statements (if any)                          
-clk i1 (
+uart_tx i1 (
 // port map - connection between master ports and signals/registers   
-	.clk(clk),
-	.clk_out(clk_out),
-	.rst(rst)
+	.RST_clk(RST_clk),
+	.RST_n(RST_n),
+	.tx_data(tx_data),
+	.uart_over(uart_over),
+	.uart_tx_data(uart_tx_data),
+	.uart_wire(uart_wire)
 );
 initial 
 begin 
 #1000000 $finish;
 end 
 
-// clk
+// RST_clk
 always
 begin
-	clk = 1'b0;
-	clk = #5000 1'b1;
-	#5000;
+	RST_clk = 1'b0;
+	RST_clk = #2500 1'b1;
+	#2500;
 end 
 
-// rst
+// RST_n
 initial
 begin
-	rst = 1'b0;
-	rst = #70000 1'b1;
+	RST_n = 1'b0;
+	RST_n = #190000 1'b1;
+end 
+// tx_data[ 7 ]
+initial
+begin
+	tx_data[7] = 1'b1;
+end 
+// tx_data[ 6 ]
+initial
+begin
+	tx_data[6] = 1'b0;
+end 
+// tx_data[ 5 ]
+initial
+begin
+	tx_data[5] = 1'b1;
+end 
+// tx_data[ 4 ]
+initial
+begin
+	tx_data[4] = 1'b0;
+end 
+// tx_data[ 3 ]
+initial
+begin
+	tx_data[3] = 1'b1;
+end 
+// tx_data[ 2 ]
+initial
+begin
+	tx_data[2] = 1'b0;
+end 
+// tx_data[ 1 ]
+initial
+begin
+	tx_data[1] = 1'b1;
+end 
+// tx_data[ 0 ]
+initial
+begin
+	tx_data[0] = 1'b0;
 end 
 endmodule
 

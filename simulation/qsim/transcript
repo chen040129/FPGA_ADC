@@ -19,18 +19,18 @@
 # -- Loading package std_logic_1164
 # -- Compiling entity uart_tx_vhd_vec_tst
 # -- Compiling architecture uart_tx_arch of uart_tx_vhd_vec_tst
-# vsim -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim -c -t 1ps -novopt work.uart_vhd_vec_tst 
+# vsim -L cycloneive -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim -c -t 1ps -novopt work.uart_tx_vhd_vec_tst 
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.uart_vhd_vec_tst(uart_arch)
+# Loading work.uart_tx_vhd_vec_tst(uart_tx_arch)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
 # Loading altera.dffeas_pack
 # Loading altera.altera_primitives_components
 # Loading cycloneive.cycloneive_atom_pack(body)
 # Loading cycloneive.cycloneive_components
-# Loading work.uart(structure)
+# Loading work.uart_tx(structure)
 # Loading altera.dffeas(vital_dffeas)
 # Loading cycloneive.cycloneive_lcell_comb(vital_lcell_comb)
 # Loading ieee.std_logic_arith(body)
@@ -45,19 +45,19 @@
 # ** Warning: Design size of 4 instances exceeds ModelSim ALTERA recommended capacity.
 # This may because you are loading cell libraries which are not recommended with
 # the ModelSim Altera version. Expect performance to be adversely affected.
-# ** Warning: (vsim-8683) Uninitialized out port /uart_vhd_vec_tst/i1/altera_internal_jtag/tdo has no driver.
+# ** Warning: (vsim-8683) Uninitialized out port /uart_tx_vhd_vec_tst/i1/altera_internal_jtag/tdo has no driver.
 # 
 # This port will contribute value (U) to the signal network.
 # 
-# ** Warning: (vsim-8683) Uninitialized out port /uart_vhd_vec_tst/i1/altera_internal_jtag/tmsutap has no driver.
+# ** Warning: (vsim-8683) Uninitialized out port /uart_tx_vhd_vec_tst/i1/altera_internal_jtag/tmsutap has no driver.
 # 
 # This port will contribute value (U) to the signal network.
 # 
-# ** Warning: (vsim-8683) Uninitialized out port /uart_vhd_vec_tst/i1/altera_internal_jtag/tckutap has no driver.
+# ** Warning: (vsim-8683) Uninitialized out port /uart_tx_vhd_vec_tst/i1/altera_internal_jtag/tckutap has no driver.
 # 
 # This port will contribute value (U) to the signal network.
 # 
-# ** Warning: (vsim-8683) Uninitialized out port /uart_vhd_vec_tst/i1/altera_internal_jtag/tdiutap has no driver.
+# ** Warning: (vsim-8683) Uninitialized out port /uart_tx_vhd_vec_tst/i1/altera_internal_jtag/tdiutap has no driver.
 # 
 # This port will contribute value (U) to the signal network.
 # 
