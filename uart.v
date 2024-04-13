@@ -4,13 +4,59 @@ module uart (
 	output uart_tx_data,
 	output uart_busy,
 	output uart_clk_tx,
-	output clk_out
+	output clk_out,
+	output [7:0] out,
+	output test_put
 );
+
+reg [3:0] i;//输出位数寄存器
+reg [7:0] arry[15:0];//输出信号
+reg [7:0] arr[15:0];//输出信号
+reg [7:0] n;
+
+assign out=arry[0];
+assign test_put=RST_clk;
+
+always @(posedge RST_clk)
+begin
+	if(!RST_n)
+	begin
+		i <= 4'd0;
+		arry[0]  <= "h";
+		arry[1]	<= "e";
+		arry[2]  <= "l";
+		arry[3]  <= "l";
+		arry[4]  <= "o";
+		arry[5]  <= " ";
+		arry[6]  <= "w";
+		arry[7]  <= "o";
+		arry[8]  <= "r";
+		arry[9]  <= "l";
+		arry[10] <= "d";
+		arry[11]	<= 8'h0A;
+		for(n=0;n<16;n=n+1)
+		begin
+			arr[n] <= arry[n];
+		end
+	end
+	else
+	begin
+		if(arry[i]==8'h0A)
+		begin
+			i<=0;
+			for(n=0;n<16;n=n+1)
+			begin
+				arry[n] <= arr[n];
+			end
+		end
+			i <= i + 1'b1;
+	end
+end
 
 uart_tx(
 	.RST_clk        (RST_clk),
 	.RST_n          (RST_n),
-	.tx_data			 (8'b10101010),//传入的8位数据，需要可以修改
+	.tx_data			 (arry[i]),//传入的8位数据，需要可以修改
 	.uart_tx_data   (uart_tx_data),//输出的接口
 	.uart_busy      (uart_busy)//传输完一个数据的判断
 );
@@ -23,6 +69,7 @@ clk(
 );//波特率发生器
 
 
+
 //SPI_tx(
 //	.RST_clk        (RST_clk),
 //	.RST_n          (RST_n),
@@ -31,6 +78,8 @@ clk(
 //	.spi_busy      (uart_busy),//传输完一个数据的判断
 //	.spi_clk        (clk_out)
 //);
+
+
 
 
 endmodule

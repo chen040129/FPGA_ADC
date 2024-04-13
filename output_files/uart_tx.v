@@ -31,7 +31,6 @@ begin
 	uart_busy<=0;//将传输完成线置低
 end//初始化传输引脚，和传输数据
 
-
 always @(posedge uart_clk_tx)
 begin
 	if(!RST_n)

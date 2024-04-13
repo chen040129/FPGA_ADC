@@ -16,11 +16,27 @@
 					"strict" : false
 				},
 				{
-					"name" : "RST_n",
+					"name" : "out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "test_put",
 					"strict" : false
 				},
 				{
 					"name" : "RST_clk",
+					"strict" : false
+				},
+				{
+					"name" : "RST_n",
 					"strict" : false
 				},
 				{

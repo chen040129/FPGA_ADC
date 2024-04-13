@@ -18,34 +18,34 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/11/2024 18:41:54"
+// Generated on "04/13/2024 16:52:28"
                                                                                 
-// Verilog Test Bench (with test vectors) for design :                          uart_tx
+// Verilog Test Bench (with test vectors) for design :                          uart
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module uart_tx_vlg_vec_tst();
+module uart_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg RST_clk;
 reg RST_n;
-reg [7:0] tx_data;
 // wires                                               
-wire uart_over;
+wire clk_out;
+wire uart_busy;
+wire uart_clk_tx;
 wire uart_tx_data;
-wire uart_wire;
 
 // assign statements (if any)                          
-uart_tx i1 (
+uart i1 (
 // port map - connection between master ports and signals/registers   
 	.RST_clk(RST_clk),
 	.RST_n(RST_n),
-	.tx_data(tx_data),
-	.uart_over(uart_over),
-	.uart_tx_data(uart_tx_data),
-	.uart_wire(uart_wire)
+	.clk_out(clk_out),
+	.uart_busy(uart_busy),
+	.uart_clk_tx(uart_clk_tx),
+	.uart_tx_data(uart_tx_data)
 );
 initial 
 begin 
@@ -64,47 +64,7 @@ end
 initial
 begin
 	RST_n = 1'b0;
-	RST_n = #190000 1'b1;
-end 
-// tx_data[ 7 ]
-initial
-begin
-	tx_data[7] = 1'b1;
-end 
-// tx_data[ 6 ]
-initial
-begin
-	tx_data[6] = 1'b0;
-end 
-// tx_data[ 5 ]
-initial
-begin
-	tx_data[5] = 1'b1;
-end 
-// tx_data[ 4 ]
-initial
-begin
-	tx_data[4] = 1'b0;
-end 
-// tx_data[ 3 ]
-initial
-begin
-	tx_data[3] = 1'b1;
-end 
-// tx_data[ 2 ]
-initial
-begin
-	tx_data[2] = 1'b0;
-end 
-// tx_data[ 1 ]
-initial
-begin
-	tx_data[1] = 1'b1;
-end 
-// tx_data[ 0 ]
-initial
-begin
-	tx_data[0] = 1'b0;
+	RST_n = #30000 1'b1;
 end 
 endmodule
 
