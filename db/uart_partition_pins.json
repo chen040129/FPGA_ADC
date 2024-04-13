@@ -16,10 +16,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk_out",
-					"strict" : false
-				},
-				{
 					"name" : "RST_n",
 					"strict" : false
 				},
