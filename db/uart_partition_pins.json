@@ -16,15 +16,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "out[3]",
-					"strict" : false
-				},
-				{
-					"name" : "out[5]",
-					"strict" : false
-				},
-				{
-					"name" : "out[6]",
+					"name" : "clk_out",
 					"strict" : false
 				},
 				{
