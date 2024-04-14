@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uart
-Sat Apr 13 19:34:02 2024
+Sun Apr 14 14:32:38 2024
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
@@ -21,9 +21,9 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
  13. Inverted Register Statistics
  14. Multiplexer Restructuring Statistics (Restructuring Performed)
  15. Source assignments for sld_signaltap:auto_signaltap_0
- 16. Parameter Settings for User Entity Instance: uart_tx:comb_986
- 17. Parameter Settings for User Entity Instance: uart_tx:comb_986|clk:comb_3
- 18. Parameter Settings for User Entity Instance: clk:comb_995
+ 16. Parameter Settings for User Entity Instance: clk:comb_12
+ 17. Parameter Settings for User Entity Instance: uart_tx:comb_684
+ 18. Parameter Settings for User Entity Instance: uart_tx:comb_684|clk:comb_3
  19. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
  20. Signal Tap Logic Analyzer Settings
  21. Post-Synthesis Netlist Statistics for Top Partition
@@ -55,13 +55,13 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 13 19:34:02 2024           ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 14 14:32:38 2024           ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
 ; Revision Name                      ; uart                                            ;
 ; Top-level Entity Name              ; uart                                            ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 908                                             ;
-;     Total combinational functions  ; 673                                             ;
+; Total logic elements               ; 912                                             ;
+;     Total combinational functions  ; 676                                             ;
 ;     Dedicated logic registers      ; 632                                             ;
 ; Total registers                    ; 632                                             ;
 ; Total pins                         ; 15                                              ;
@@ -247,16 +247,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 908                      ;
+; Estimated Total logic elements              ; 912                      ;
 ;                                             ;                          ;
-; Total combinational functions               ; 673                      ;
+; Total combinational functions               ; 676                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 281                      ;
-;     -- 3 input functions                    ; 137                      ;
-;     -- <=2 input functions                  ; 255                      ;
+;     -- 4 input functions                    ; 277                      ;
+;     -- 3 input functions                    ; 148                      ;
+;     -- <=2 input functions                  ; 251                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 500                      ;
+;     -- normal mode                          ; 503                      ;
 ;     -- arithmetic mode                      ; 173                      ;
 ;                                             ;                          ;
 ; Total registers                             ; 632                      ;
@@ -270,7 +270,7 @@ refer to the applicable agreement for further details.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 346                      ;
-; Total fan-out                               ; 4258                     ;
+; Total fan-out                               ; 4267                     ;
 ; Average fan-out                             ; 3.14                     ;
 +---------------------------------------------+--------------------------+
 
@@ -280,8 +280,8 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                              ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |uart                                                                                                                                   ; 673 (13)            ; 632 (6)                   ; 1536        ; 0            ; 0       ; 0         ; 15   ; 0            ; |uart                                                                                                                                                                                                                                                                                                                                            ; uart                              ; work         ;
-;    |clk:comb_995|                                                                                                                       ; 94 (94)             ; 66 (66)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|clk:comb_995                                                                                                                                                                                                                                                                                                                               ; clk                               ; work         ;
+; |uart                                                                                                                                   ; 676 (16)            ; 632 (6)                   ; 1536        ; 0            ; 0       ; 0         ; 15   ; 0            ; |uart                                                                                                                                                                                                                                                                                                                                            ; uart                              ; work         ;
+;    |clk:comb_12|                                                                                                                        ; 94 (94)             ; 66 (66)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|clk:comb_12                                                                                                                                                                                                                                                                                                                                ; clk                               ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 129 (1)             ; 91 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 128 (0)             ; 91 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 128 (0)             ; 91 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -336,8 +336,8 @@ refer to the applicable agreement for further details.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 12 (12)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                               ; lpm_shiftreg                      ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 15 (15)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                            ; lpm_shiftreg                      ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 30 (30)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                          ; sld_rom_sr                        ; work         ;
-;    |uart_tx:comb_986|                                                                                                                   ; 108 (106)           ; 54 (52)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|uart_tx:comb_986                                                                                                                                                                                                                                                                                                                           ; uart_tx                           ; work         ;
-;       |clk:comb_3|                                                                                                                      ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|uart_tx:comb_986|clk:comb_3                                                                                                                                                                                                                                                                                                                ; clk                               ; work         ;
+;    |uart_tx:comb_684|                                                                                                                   ; 108 (106)           ; 54 (52)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|uart_tx:comb_684                                                                                                                                                                                                                                                                                                                           ; uart_tx                           ; work         ;
+;       |clk:comb_3|                                                                                                                      ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|uart_tx:comb_684|clk:comb_3                                                                                                                                                                                                                                                                                                                ; clk                               ; work         ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -463,70 +463,70 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; arry[9][3]                              ; Merged with arry[0][3]                 ;
 ; arry[9][5]                              ; Merged with arry[0][3]                 ;
 ; arry[9][6]                              ; Merged with arry[0][3]                 ;
-; uart_tx:comb_986|clk:comb_3|div_2[7]    ; Merged with clk:comb_995|div_2[7]      ;
-; uart_tx:comb_986|clk:comb_3|div_2[6]    ; Merged with clk:comb_995|div_2[6]      ;
-; uart_tx:comb_986|clk:comb_3|div_2[4]    ; Merged with clk:comb_995|div_2[4]      ;
-; uart_tx:comb_986|clk:comb_3|div_2[3]    ; Merged with clk:comb_995|div_2[3]      ;
-; uart_tx:comb_986|clk:comb_3|div_2[0]    ; Merged with clk:comb_995|div_2[0]      ;
-; uart_tx:comb_986|clk:comb_3|div_2[31]   ; Merged with clk:comb_995|div_2[31]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[30]   ; Merged with clk:comb_995|div_2[30]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[29]   ; Merged with clk:comb_995|div_2[29]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[28]   ; Merged with clk:comb_995|div_2[28]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[27]   ; Merged with clk:comb_995|div_2[27]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[26]   ; Merged with clk:comb_995|div_2[26]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[25]   ; Merged with clk:comb_995|div_2[25]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[24]   ; Merged with clk:comb_995|div_2[24]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[23]   ; Merged with clk:comb_995|div_2[23]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[22]   ; Merged with clk:comb_995|div_2[22]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[21]   ; Merged with clk:comb_995|div_2[21]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[20]   ; Merged with clk:comb_995|div_2[20]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[19]   ; Merged with clk:comb_995|div_2[19]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[18]   ; Merged with clk:comb_995|div_2[18]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[17]   ; Merged with clk:comb_995|div_2[17]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[16]   ; Merged with clk:comb_995|div_2[16]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[15]   ; Merged with clk:comb_995|div_2[15]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[14]   ; Merged with clk:comb_995|div_2[14]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[13]   ; Merged with clk:comb_995|div_2[13]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[12]   ; Merged with clk:comb_995|div_2[12]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[11]   ; Merged with clk:comb_995|div_2[11]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[10]   ; Merged with clk:comb_995|div_2[10]     ;
-; uart_tx:comb_986|clk:comb_3|div_2[9]    ; Merged with clk:comb_995|div_2[9]      ;
-; uart_tx:comb_986|clk:comb_3|div_2[8]    ; Merged with clk:comb_995|div_2[8]      ;
-; uart_tx:comb_986|clk:comb_3|div_2[5]    ; Merged with clk:comb_995|div_2[5]      ;
-; uart_tx:comb_986|clk:comb_3|div_2[2]    ; Merged with clk:comb_995|div_2[2]      ;
-; uart_tx:comb_986|clk:comb_3|div_2[1]    ; Merged with clk:comb_995|div_2[1]      ;
-; uart_tx:comb_986|clk:comb_3|div_1[7]    ; Merged with clk:comb_995|div_1[7]      ;
-; uart_tx:comb_986|clk:comb_3|div_1[6]    ; Merged with clk:comb_995|div_1[6]      ;
-; uart_tx:comb_986|clk:comb_3|div_1[4]    ; Merged with clk:comb_995|div_1[4]      ;
-; uart_tx:comb_986|clk:comb_3|div_1[3]    ; Merged with clk:comb_995|div_1[3]      ;
-; uart_tx:comb_986|clk:comb_3|div_1[0]    ; Merged with clk:comb_995|div_1[0]      ;
-; uart_tx:comb_986|clk:comb_3|div_1[31]   ; Merged with clk:comb_995|div_1[31]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[30]   ; Merged with clk:comb_995|div_1[30]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[29]   ; Merged with clk:comb_995|div_1[29]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[28]   ; Merged with clk:comb_995|div_1[28]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[27]   ; Merged with clk:comb_995|div_1[27]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[26]   ; Merged with clk:comb_995|div_1[26]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[25]   ; Merged with clk:comb_995|div_1[25]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[24]   ; Merged with clk:comb_995|div_1[24]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[23]   ; Merged with clk:comb_995|div_1[23]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[22]   ; Merged with clk:comb_995|div_1[22]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[21]   ; Merged with clk:comb_995|div_1[21]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[20]   ; Merged with clk:comb_995|div_1[20]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[19]   ; Merged with clk:comb_995|div_1[19]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[18]   ; Merged with clk:comb_995|div_1[18]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[17]   ; Merged with clk:comb_995|div_1[17]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[16]   ; Merged with clk:comb_995|div_1[16]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[15]   ; Merged with clk:comb_995|div_1[15]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[14]   ; Merged with clk:comb_995|div_1[14]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[13]   ; Merged with clk:comb_995|div_1[13]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[12]   ; Merged with clk:comb_995|div_1[12]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[11]   ; Merged with clk:comb_995|div_1[11]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[10]   ; Merged with clk:comb_995|div_1[10]     ;
-; uart_tx:comb_986|clk:comb_3|div_1[9]    ; Merged with clk:comb_995|div_1[9]      ;
-; uart_tx:comb_986|clk:comb_3|div_1[8]    ; Merged with clk:comb_995|div_1[8]      ;
-; uart_tx:comb_986|clk:comb_3|div_1[5]    ; Merged with clk:comb_995|div_1[5]      ;
-; uart_tx:comb_986|clk:comb_3|div_1[2]    ; Merged with clk:comb_995|div_1[2]      ;
-; uart_tx:comb_986|clk:comb_3|div_1[1]    ; Merged with clk:comb_995|div_1[1]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[7]    ; Merged with clk:comb_12|div_2[7]       ;
+; uart_tx:comb_684|clk:comb_3|div_2[6]    ; Merged with clk:comb_12|div_2[6]       ;
+; uart_tx:comb_684|clk:comb_3|div_2[4]    ; Merged with clk:comb_12|div_2[4]       ;
+; uart_tx:comb_684|clk:comb_3|div_2[3]    ; Merged with clk:comb_12|div_2[3]       ;
+; uart_tx:comb_684|clk:comb_3|div_2[0]    ; Merged with clk:comb_12|div_2[0]       ;
+; uart_tx:comb_684|clk:comb_3|div_2[31]   ; Merged with clk:comb_12|div_2[31]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[30]   ; Merged with clk:comb_12|div_2[30]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[29]   ; Merged with clk:comb_12|div_2[29]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[28]   ; Merged with clk:comb_12|div_2[28]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[27]   ; Merged with clk:comb_12|div_2[27]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[26]   ; Merged with clk:comb_12|div_2[26]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[25]   ; Merged with clk:comb_12|div_2[25]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[24]   ; Merged with clk:comb_12|div_2[24]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[23]   ; Merged with clk:comb_12|div_2[23]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[22]   ; Merged with clk:comb_12|div_2[22]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[21]   ; Merged with clk:comb_12|div_2[21]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[20]   ; Merged with clk:comb_12|div_2[20]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[19]   ; Merged with clk:comb_12|div_2[19]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[18]   ; Merged with clk:comb_12|div_2[18]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[17]   ; Merged with clk:comb_12|div_2[17]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[16]   ; Merged with clk:comb_12|div_2[16]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[15]   ; Merged with clk:comb_12|div_2[15]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[14]   ; Merged with clk:comb_12|div_2[14]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[13]   ; Merged with clk:comb_12|div_2[13]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[12]   ; Merged with clk:comb_12|div_2[12]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[11]   ; Merged with clk:comb_12|div_2[11]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[10]   ; Merged with clk:comb_12|div_2[10]      ;
+; uart_tx:comb_684|clk:comb_3|div_2[9]    ; Merged with clk:comb_12|div_2[9]       ;
+; uart_tx:comb_684|clk:comb_3|div_2[8]    ; Merged with clk:comb_12|div_2[8]       ;
+; uart_tx:comb_684|clk:comb_3|div_2[5]    ; Merged with clk:comb_12|div_2[5]       ;
+; uart_tx:comb_684|clk:comb_3|div_2[2]    ; Merged with clk:comb_12|div_2[2]       ;
+; uart_tx:comb_684|clk:comb_3|div_2[1]    ; Merged with clk:comb_12|div_2[1]       ;
+; uart_tx:comb_684|clk:comb_3|div_1[7]    ; Merged with clk:comb_12|div_1[7]       ;
+; uart_tx:comb_684|clk:comb_3|div_1[6]    ; Merged with clk:comb_12|div_1[6]       ;
+; uart_tx:comb_684|clk:comb_3|div_1[4]    ; Merged with clk:comb_12|div_1[4]       ;
+; uart_tx:comb_684|clk:comb_3|div_1[3]    ; Merged with clk:comb_12|div_1[3]       ;
+; uart_tx:comb_684|clk:comb_3|div_1[0]    ; Merged with clk:comb_12|div_1[0]       ;
+; uart_tx:comb_684|clk:comb_3|div_1[31]   ; Merged with clk:comb_12|div_1[31]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[30]   ; Merged with clk:comb_12|div_1[30]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[29]   ; Merged with clk:comb_12|div_1[29]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[28]   ; Merged with clk:comb_12|div_1[28]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[27]   ; Merged with clk:comb_12|div_1[27]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[26]   ; Merged with clk:comb_12|div_1[26]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[25]   ; Merged with clk:comb_12|div_1[25]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[24]   ; Merged with clk:comb_12|div_1[24]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[23]   ; Merged with clk:comb_12|div_1[23]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[22]   ; Merged with clk:comb_12|div_1[22]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[21]   ; Merged with clk:comb_12|div_1[21]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[20]   ; Merged with clk:comb_12|div_1[20]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[19]   ; Merged with clk:comb_12|div_1[19]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[18]   ; Merged with clk:comb_12|div_1[18]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[17]   ; Merged with clk:comb_12|div_1[17]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[16]   ; Merged with clk:comb_12|div_1[16]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[15]   ; Merged with clk:comb_12|div_1[15]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[14]   ; Merged with clk:comb_12|div_1[14]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[13]   ; Merged with clk:comb_12|div_1[13]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[12]   ; Merged with clk:comb_12|div_1[12]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[11]   ; Merged with clk:comb_12|div_1[11]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[10]   ; Merged with clk:comb_12|div_1[10]      ;
+; uart_tx:comb_684|clk:comb_3|div_1[9]    ; Merged with clk:comb_12|div_1[9]       ;
+; uart_tx:comb_684|clk:comb_3|div_1[8]    ; Merged with clk:comb_12|div_1[8]       ;
+; uart_tx:comb_684|clk:comb_3|div_1[5]    ; Merged with clk:comb_12|div_1[5]       ;
+; uart_tx:comb_684|clk:comb_3|div_1[2]    ; Merged with clk:comb_12|div_1[2]       ;
+; uart_tx:comb_684|clk:comb_3|div_1[1]    ; Merged with clk:comb_12|div_1[1]       ;
 ; arr[0][1]                               ; Merged with arr[0][0]                  ;
 ; arr[0][2]                               ; Merged with arr[0][0]                  ;
 ; arr[0][4]                               ; Merged with arr[0][0]                  ;
@@ -575,37 +575,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; arr[9][1]                               ; Merged with arr[0][0]                  ;
 ; arr[9][4]                               ; Merged with arr[0][0]                  ;
 ; arr[9][7]                               ; Merged with arr[0][0]                  ;
-; arry[12][1]                             ; Merged with arry[12][0]                ;
-; arry[12][2]                             ; Merged with arry[12][0]                ;
-; arry[12][3]                             ; Merged with arry[12][0]                ;
-; arry[12][4]                             ; Merged with arry[12][0]                ;
-; arry[12][5]                             ; Merged with arry[12][0]                ;
-; arry[12][6]                             ; Merged with arry[12][0]                ;
-; arry[12][7]                             ; Merged with arry[12][0]                ;
-; arry[13][0]                             ; Merged with arry[12][0]                ;
-; arry[13][1]                             ; Merged with arry[12][0]                ;
-; arry[13][2]                             ; Merged with arry[12][0]                ;
-; arry[13][3]                             ; Merged with arry[12][0]                ;
-; arry[13][4]                             ; Merged with arry[12][0]                ;
-; arry[13][5]                             ; Merged with arry[12][0]                ;
-; arry[13][6]                             ; Merged with arry[12][0]                ;
-; arry[13][7]                             ; Merged with arry[12][0]                ;
-; arry[14][0]                             ; Merged with arry[12][0]                ;
-; arry[14][1]                             ; Merged with arry[12][0]                ;
-; arry[14][2]                             ; Merged with arry[12][0]                ;
-; arry[14][3]                             ; Merged with arry[12][0]                ;
-; arry[14][4]                             ; Merged with arry[12][0]                ;
-; arry[14][5]                             ; Merged with arry[12][0]                ;
-; arry[14][6]                             ; Merged with arry[12][0]                ;
-; arry[14][7]                             ; Merged with arry[12][0]                ;
-; arry[15][0]                             ; Merged with arry[12][0]                ;
-; arry[15][1]                             ; Merged with arry[12][0]                ;
-; arry[15][2]                             ; Merged with arry[12][0]                ;
-; arry[15][3]                             ; Merged with arry[12][0]                ;
-; arry[15][4]                             ; Merged with arry[12][0]                ;
-; arry[15][5]                             ; Merged with arry[12][0]                ;
-; arry[15][6]                             ; Merged with arry[12][0]                ;
-; arry[15][7]                             ; Merged with arry[12][0]                ;
 ; arr[0][5]                               ; Merged with arr[0][3]                  ;
 ; arr[0][6]                               ; Merged with arr[0][3]                  ;
 ; arr[10][2]                              ; Merged with arr[0][3]                  ;
@@ -652,42 +621,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; arr[9][3]                               ; Merged with arr[0][3]                  ;
 ; arr[9][5]                               ; Merged with arr[0][3]                  ;
 ; arr[9][6]                               ; Merged with arr[0][3]                  ;
-; arr[12][1]                              ; Merged with arr[12][0]                 ;
-; arr[12][2]                              ; Merged with arr[12][0]                 ;
-; arr[12][3]                              ; Merged with arr[12][0]                 ;
-; arr[12][4]                              ; Merged with arr[12][0]                 ;
-; arr[12][5]                              ; Merged with arr[12][0]                 ;
-; arr[12][6]                              ; Merged with arr[12][0]                 ;
-; arr[12][7]                              ; Merged with arr[12][0]                 ;
-; arr[13][0]                              ; Merged with arr[12][0]                 ;
-; arr[13][1]                              ; Merged with arr[12][0]                 ;
-; arr[13][2]                              ; Merged with arr[12][0]                 ;
-; arr[13][3]                              ; Merged with arr[12][0]                 ;
-; arr[13][4]                              ; Merged with arr[12][0]                 ;
-; arr[13][5]                              ; Merged with arr[12][0]                 ;
-; arr[13][6]                              ; Merged with arr[12][0]                 ;
-; arr[13][7]                              ; Merged with arr[12][0]                 ;
-; arr[14][0]                              ; Merged with arr[12][0]                 ;
-; arr[14][1]                              ; Merged with arr[12][0]                 ;
-; arr[14][2]                              ; Merged with arr[12][0]                 ;
-; arr[14][3]                              ; Merged with arr[12][0]                 ;
-; arr[14][4]                              ; Merged with arr[12][0]                 ;
-; arr[14][5]                              ; Merged with arr[12][0]                 ;
-; arr[14][6]                              ; Merged with arr[12][0]                 ;
-; arr[14][7]                              ; Merged with arr[12][0]                 ;
-; arr[15][0]                              ; Merged with arr[12][0]                 ;
-; arr[15][1]                              ; Merged with arr[12][0]                 ;
-; arr[15][2]                              ; Merged with arr[12][0]                 ;
-; arr[15][3]                              ; Merged with arr[12][0]                 ;
-; arr[15][4]                              ; Merged with arr[12][0]                 ;
-; arr[15][5]                              ; Merged with arr[12][0]                 ;
-; arr[15][6]                              ; Merged with arr[12][0]                 ;
-; arr[15][7]                              ; Merged with arr[12][0]                 ;
-; arry[12][0]                             ; Stuck at GND due to stuck port data_in ;
-; arr[12][0]                              ; Stuck at GND due to stuck port data_in ;
 ; arr[0][0]                               ; Stuck at GND due to stuck port data_in ;
 ; arry[0][0]                              ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 318 ;                                        ;
+; Total Number of Removed Registers = 254 ;                                        ;
 +-----------------------------------------+----------------------------------------+
 
 
@@ -696,8 +632,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------+---------------------------+----------------------------------------+
 ; Register name ; Reason for Removal        ; Registers Removed due to This Register ;
 +---------------+---------------------------+----------------------------------------+
-; arry[12][0]   ; Stuck at GND              ; arr[12][0]                             ;
-;               ; due to stuck port data_in ;                                        ;
 ; arr[0][0]     ; Stuck at GND              ; arry[0][0]                             ;
 ;               ; due to stuck port data_in ;                                        ;
 +---------------+---------------------------+----------------------------------------+
@@ -723,7 +657,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; uart_tx:comb_986|uart_tx_data                                                                                                                                                                                                                                                                                                   ; 3       ;
+; uart_tx:comb_684|uart_tx_data                                                                                                                                                                                                                                                                                                   ; 3       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 2       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[1]                                                                                                                                                   ; 1       ;
@@ -743,12 +677,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |uart|clk:comb_995|div_2[25]            ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |uart|clk:comb_995|div_1[17]            ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |uart|uart_tx:comb_986|clk:comb_3|clk_2 ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |uart|clk:comb_995|clk_1                ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |uart|clk:comb_12|div_2[17]             ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |uart|clk:comb_12|div_1[21]             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |uart|clk:comb_12|clk_2                 ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |uart|uart_tx:comb_684|clk:comb_3|clk_1 ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |uart|arry[0][0]                        ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |uart|uart_tx:comb_986|delay_cnt[31]    ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |uart|i[0]                              ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |uart|uart_tx:comb_684|delay_cnt[29]    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
 
 
@@ -761,8 +696,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+-------+------+----------------------+
 
 
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: clk:comb_12 ;
++----------------+--------+--------------------------------+
+; Parameter Name ; Value  ; Type                           ;
++----------------+--------+--------------------------------+
+; Baud_rate      ; 115200 ; Signed Integer                 ;
+; Fdc            ; 434    ; Signed Integer                 ;
++----------------+--------+--------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uart_tx:comb_986 ;
+; Parameter Settings for User Entity Instance: uart_tx:comb_684 ;
 +----------------+-------+--------------------------------------+
 ; Parameter Name ; Value ; Type                                 ;
 +----------------+-------+--------------------------------------+
@@ -776,24 +722,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: uart_tx:comb_986|clk:comb_3 ;
+; Parameter Settings for User Entity Instance: uart_tx:comb_684|clk:comb_3 ;
 +----------------+--------+------------------------------------------------+
 ; Parameter Name ; Value  ; Type                                           ;
 +----------------+--------+------------------------------------------------+
 ; Baud_rate      ; 115200 ; Signed Integer                                 ;
 ; Fdc            ; 434    ; Signed Integer                                 ;
 +----------------+--------+------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: clk:comb_995 ;
-+----------------+--------+---------------------------------+
-; Parameter Name ; Value  ; Type                            ;
-+----------------+--------+---------------------------------+
-; Baud_rate      ; 115200 ; Signed Integer                  ;
-; Fdc            ; 434    ; Signed Integer                  ;
-+----------------+--------+---------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -884,18 +819,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 64                          ;
 ;     SLD               ; 3                           ;
 ;     plain             ; 41                          ;
-; cycloneiii_lcell_comb ; 215                         ;
+; cycloneiii_lcell_comb ; 218                         ;
 ;     arith             ; 100                         ;
 ;         2 data inputs ; 100                         ;
-;     normal            ; 115                         ;
+;     normal            ; 118                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 16                          ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 87                          ;
+;         2 data inputs ; 12                          ;
+;         3 data inputs ; 17                          ;
+;         4 data inputs ; 83                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.10                        ;
-; Average LUT depth     ; 3.78                        ;
+; Average LUT depth     ; 3.72                        ;
 +-----------------------+-----------------------------+
 
 
@@ -932,12 +867,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; out[6]               ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; arry[0][3]                              ; N/A     ;
 ; out[7]               ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                    ; N/A     ;
 ; out[7]               ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; ~GND                                    ; N/A     ;
-; uart_busy            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; uart_tx:comb_986|uart_busy              ; N/A     ;
-; uart_busy            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; uart_tx:comb_986|uart_busy              ; N/A     ;
-; uart_clk_tx          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; clk:comb_995|clk_out                    ; N/A     ;
-; uart_clk_tx          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; clk:comb_995|clk_out                    ; N/A     ;
-; uart_tx_data         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; uart_tx:comb_986|uart_tx_data~_wirecell ; N/A     ;
-; uart_tx_data         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; uart_tx:comb_986|uart_tx_data~_wirecell ; N/A     ;
+; uart_busy            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; uart_tx:comb_684|uart_busy              ; N/A     ;
+; uart_busy            ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; uart_tx:comb_684|uart_busy              ; N/A     ;
+; uart_clk_tx          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; clk:comb_12|clk_out                     ; N/A     ;
+; uart_clk_tx          ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; clk:comb_12|clk_out                     ; N/A     ;
+; uart_tx_data         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; uart_tx:comb_684|uart_tx_data~_wirecell ; N/A     ;
+; uart_tx_data         ; pre-synthesis ; connected ; Top                            ; post-synthesis    ; uart_tx:comb_684|uart_tx_data~_wirecell ; N/A     ;
 ; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND     ; N/A     ;
 ; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND     ; N/A     ;
 ; auto_signaltap_0|gnd ; post-fitting  ; connected ; sld_signaltap:auto_signaltap_0 ; post-synthesis    ; sld_signaltap:auto_signaltap_0|~GND     ; N/A     ;
@@ -979,37 +914,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
-    Info: Processing started: Sat Apr 13 19:32:33 2024
+    Info: Processing started: Sun Apr 14 14:31:26 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uart -c uart
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12248): Elaborating Platform Designer system entity "SPI.qsys"
-Info (12250): 2024.04.13.19:32:53 Progress: Loading MY_UART/SPI.qsys
-Info (12250): 2024.04.13.19:32:56 Progress: Reading input file
-Info (12250): 2024.04.13.19:32:56 Progress: Adding clk_0 [clock_source 18.0]
-Info (12250): 2024.04.13.19:32:57 Progress: Parameterizing module clk_0
-Info (12250): 2024.04.13.19:32:57 Progress: Adding spislave_0 [spislave 18.0]
-Info (12250): 2024.04.13.19:32:59 Progress: Parameterizing module spislave_0
-Info (12250): 2024.04.13.19:32:59 Progress: Building connections
-Info (12250): 2024.04.13.19:32:59 Progress: Parameterizing connections
-Info (12250): 2024.04.13.19:32:59 Progress: Validating
-Info (12250): 2024.04.13.19:32:59 Progress: Done reading input file
+Info (12250): 2024.04.14.14:31:41 Progress: Loading MY_UART/SPI.qsys
+Info (12250): 2024.04.14.14:31:43 Progress: Reading input file
+Info (12250): 2024.04.14.14:31:43 Progress: Adding clk_0 [clock_source 18.0]
+Info (12250): 2024.04.14.14:31:44 Progress: Parameterizing module clk_0
+Info (12250): 2024.04.14.14:31:44 Progress: Adding spislave_0 [spislave 18.0]
+Info (12250): 2024.04.14.14:31:45 Progress: Parameterizing module spislave_0
+Info (12250): 2024.04.14.14:31:45 Progress: Building connections
+Info (12250): 2024.04.14.14:31:45 Progress: Parameterizing connections
+Info (12250): 2024.04.14.14:31:45 Progress: Validating
+Info (12250): 2024.04.14.14:31:46 Progress: Done reading input file
 Info (12250): SPI: Generating SPI "SPI" for QUARTUS_SYNTH
 Info (12250): Spislave_0: "SPI" instantiated spislave "spislave_0"
 Info (12250): Rst_controller: "SPI" instantiated altera_reset_controller "rst_controller"
 Info (12250): SPI: Done "SPI" with 3 modules, 5 files
 Info (12249): Finished elaborating Platform Designer system entity "SPI.qsys"
 Info (12248): Elaborating Platform Designer system entity "unnamed.qsys"
-Info (12250): 2024.04.13.19:33:14 Progress: Loading MY_UART/unnamed.qsys
-Info (12250): 2024.04.13.19:33:17 Progress: Reading input file
-Info (12250): 2024.04.13.19:33:17 Progress: Adding clk_0 [clock_source 18.0]
-Info (12250): 2024.04.13.19:33:18 Progress: Parameterizing module clk_0
-Info (12250): 2024.04.13.19:33:18 Progress: Adding rs232_0 [altera_up_avalon_rs232 17.1]
-Info (12250): 2024.04.13.19:33:18 Progress: Parameterizing module rs232_0
-Info (12250): 2024.04.13.19:33:18 Progress: Building connections
-Info (12250): 2024.04.13.19:33:18 Progress: Parameterizing connections
-Info (12250): 2024.04.13.19:33:18 Progress: Validating
-Info (12250): 2024.04.13.19:33:19 Progress: Done reading input file
+Info (12250): 2024.04.14.14:31:58 Progress: Loading MY_UART/unnamed.qsys
+Info (12250): 2024.04.14.14:32:00 Progress: Reading input file
+Info (12250): 2024.04.14.14:32:00 Progress: Adding clk_0 [clock_source 18.0]
+Info (12250): 2024.04.14.14:32:01 Progress: Parameterizing module clk_0
+Info (12250): 2024.04.14.14:32:01 Progress: Adding rs232_0 [altera_up_avalon_rs232 17.1]
+Info (12250): 2024.04.14.14:32:01 Progress: Parameterizing module rs232_0
+Info (12250): 2024.04.14.14:32:01 Progress: Building connections
+Info (12250): 2024.04.14.14:32:01 Progress: Parameterizing connections
+Info (12250): 2024.04.14.14:32:01 Progress: Validating
+Info (12250): 2024.04.14.14:32:01 Progress: Done reading input file
 Info (12250): Unnamed: Generating unnamed "unnamed" for QUARTUS_SYNTH
 Info (12250): Rs232_0: Starting Generation of RS232 UART
 Info (12250): Rs232_0: "unnamed" instantiated altera_up_avalon_rs232 "rs232_0"
@@ -1057,22 +992,21 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ip/u
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/unnamed/unnamed.v
     Info (12023): Found entity 1: unnamed File: E:/FPGA_FILE/MY_UART/db/ip/unnamed/unnamed.v Line: 6
 Warning (10236): Verilog HDL Implicit Net warning at uart_rx.v(27): created implicit net for "uart_clk_rx" File: E:/FPGA_FILE/MY_UART/output_files/uart_rx.v Line: 27
+Critical Warning (10846): Verilog HDL Instantiation warning at uart.v(26): instance has no name File: E:/FPGA_FILE/MY_UART/uart.v Line: 26
 Critical Warning (10846): Verilog HDL Instantiation warning at uart_tx.v(25): instance has no name File: E:/FPGA_FILE/MY_UART/output_files/uart_tx.v Line: 25
-Critical Warning (10846): Verilog HDL Instantiation warning at uart.v(62): instance has no name File: E:/FPGA_FILE/MY_UART/uart.v Line: 62
-Critical Warning (10846): Verilog HDL Instantiation warning at uart.v(69): instance has no name File: E:/FPGA_FILE/MY_UART/uart.v Line: 69
+Critical Warning (10846): Verilog HDL Instantiation warning at uart.v(71): instance has no name File: E:/FPGA_FILE/MY_UART/uart.v Line: 71
 Critical Warning (10846): Verilog HDL Instantiation warning at uart_rx.v(28): instance has no name File: E:/FPGA_FILE/MY_UART/output_files/uart_rx.v Line: 28
 Critical Warning (10846): Verilog HDL Instantiation warning at SPI.v(23): instance has no name File: E:/FPGA_FILE/MY_UART/output_files/SPI.v Line: 23
 Info (12127): Elaborating entity "uart" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at uart.v(37): truncated value with size 32 to match size of target (8) File: E:/FPGA_FILE/MY_UART/uart.v Line: 37
-Warning (10230): Verilog HDL assignment warning at uart.v(47): truncated value with size 32 to match size of target (8) File: E:/FPGA_FILE/MY_UART/uart.v Line: 47
+Warning (10030): Net "arry[15..12]" at uart.v(13) has no driver or initial value, using a default initial value '0' File: E:/FPGA_FILE/MY_UART/uart.v Line: 13
 Warning (10034): Output port "clk_out" at uart.v(7) has no driver File: E:/FPGA_FILE/MY_UART/uart.v Line: 7
-Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:comb_986" File: E:/FPGA_FILE/MY_UART/uart.v Line: 62
+Info (12128): Elaborating entity "clk" for hierarchy "clk:comb_12" File: E:/FPGA_FILE/MY_UART/uart.v Line: 26
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:comb_684" File: E:/FPGA_FILE/MY_UART/uart.v Line: 71
 Warning (10230): Verilog HDL assignment warning at uart_tx.v(39): truncated value with size 32 to match size of target (1) File: E:/FPGA_FILE/MY_UART/output_files/uart_tx.v Line: 39
 Warning (10230): Verilog HDL assignment warning at uart_tx.v(41): truncated value with size 32 to match size of target (1) File: E:/FPGA_FILE/MY_UART/output_files/uart_tx.v Line: 41
 Warning (10230): Verilog HDL assignment warning at uart_tx.v(45): truncated value with size 32 to match size of target (1) File: E:/FPGA_FILE/MY_UART/output_files/uart_tx.v Line: 45
 Warning (10230): Verilog HDL assignment warning at uart_tx.v(47): truncated value with size 32 to match size of target (1) File: E:/FPGA_FILE/MY_UART/output_files/uart_tx.v Line: 47
 Warning (10230): Verilog HDL assignment warning at uart_tx.v(59): truncated value with size 32 to match size of target (8) File: E:/FPGA_FILE/MY_UART/output_files/uart_tx.v Line: 59
-Info (12128): Elaborating entity "clk" for hierarchy "uart_tx:comb_986|clk:comb_3" File: E:/FPGA_FILE/MY_UART/output_files/uart_tx.v Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_s424.tdf
     Info (12023): Found entity 1: altsyncram_s424 File: E:/FPGA_FILE/MY_UART/db/altsyncram_s424.tdf Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_ssc.tdf
@@ -1093,7 +1027,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ngc File: E:/FPGA_FILE/MY_UART/db/cmpr_ngc.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.04.13.19:33:37 Progress: Loading sld23d5e3ab/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.04.14.14:32:17 Progress: Loading sld23d5e3ab/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1131,15 +1065,15 @@ Warning (20013): Ignored 19 assignments for entity "unnamed" -- entity does not 
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 57 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 961 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 963 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 929 logic cells
+    Info (21061): Implemented 931 logic cells
     Info (21064): Implemented 12 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 26 warnings
-    Info: Peak virtual memory: 4901 megabytes
-    Info: Processing ended: Sat Apr 13 19:34:02 2024
-    Info: Elapsed time: 00:01:29
-    Info: Total CPU time (on all processors): 00:00:20
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 25 warnings
+    Info: Peak virtual memory: 4897 megabytes
+    Info: Processing ended: Sun Apr 14 14:32:38 2024
+    Info: Elapsed time: 00:01:12
+    Info: Total CPU time (on all processors): 00:00:19
 
 

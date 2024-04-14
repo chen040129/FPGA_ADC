@@ -12,16 +12,22 @@ module uart (
 reg [3:0] i;//输出位数寄存器
 reg [7:0] arry[15:0];//输出信号
 reg [7:0] arr[15:0];//输出信号
-reg [7:0] n;
+reg [7:0] test;
+integer n;
 
 assign out=arry[0];
-assign test_put=RST_clk;
+assign test_put=i[0];
 
-always @(posedge RST_clk)
+
+clk(
+	.rst		(RST_n),//复位按钮
+	.clk		(RST_clk),//输入时钟
+	.clk_out	(uart_clk_tx)//输出时钟
+);//波特率发生器
+
+
+always @(negedge uart_busy)//设置移位的数量
 begin
-	if(!RST_n)
-	begin
-		i <= 4'd0;
 		arry[0]  <= "h";
 		arry[1]	<= "e";
 		arry[2]  <= "l";
@@ -34,22 +40,25 @@ begin
 		arry[9]  <= "l";
 		arry[10] <= "d";
 		arry[11]	<= 8'h0A;
-		for(n=0;n<16;n=n+1)
+		for(n=0;n<12;n=n+1)
 		begin
 			arr[n] <= arry[n];
 		end
+	if(!RST_n)
+	begin
+		i <= 4'd0;
 	end
 	else
 	begin
+		i <= i + 1'b1;
 		if(arry[i]==8'h0A)
 		begin
 			i<=0;
-			for(n=0;n<16;n=n+1)
+			for(n=0;n<12;n=n+1)
 			begin
 				arry[n] <= arr[n];
 			end
 		end
-			i <= i + 1'b1;
 	end
 end
 
@@ -62,11 +71,6 @@ uart_tx(
 );
 
 
-clk(
-	.rst		(RST_n),//复位按钮
-	.clk		(RST_clk),//输入时钟
-	.clk_out	(uart_clk_tx)//输出时钟
-);//波特率发生器
 
 
 

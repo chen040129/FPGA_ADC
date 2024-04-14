@@ -1,9 +1,9 @@
 |uart
 RST_clk => RST_clk.IN2
 RST_n => RST_n.IN2
-uart_tx_data <= uart_tx:comb_986.uart_tx_data
-uart_busy <= uart_tx:comb_986.uart_busy
-uart_clk_tx <= clk:comb_995.clk_out
+uart_tx_data <= uart_tx:comb_684.uart_tx_data
+uart_busy <= uart_tx:comb_684.uart_busy
+uart_clk_tx <= clk:comb_12.clk_out
 clk_out <= <GND>
 out[0] <= arry[0][0].DB_MAX_OUTPUT_PORT_TYPE
 out[1] <= arry[0][1].DB_MAX_OUTPUT_PORT_TYPE
@@ -13,41 +13,10 @@ out[4] <= arry[0][4].DB_MAX_OUTPUT_PORT_TYPE
 out[5] <= arry[0][5].DB_MAX_OUTPUT_PORT_TYPE
 out[6] <= arry[0][6].DB_MAX_OUTPUT_PORT_TYPE
 out[7] <= arry[0][7].DB_MAX_OUTPUT_PORT_TYPE
-test_put <= RST_clk.DB_MAX_OUTPUT_PORT_TYPE
+test_put <= i[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uart|uart_tx:comb_986
-RST_clk => RST_clk.IN1
-RST_n => RST_n.IN1
-tx_data[0] => output_data.DATAA
-tx_data[0] => output_data.DATAB
-tx_data[0] => output_data.DATAB
-tx_data[1] => output_data.DATAA
-tx_data[1] => output_data.DATAB
-tx_data[1] => output_data.DATAB
-tx_data[2] => output_data.DATAA
-tx_data[2] => output_data.DATAB
-tx_data[2] => output_data.DATAB
-tx_data[3] => output_data.DATAA
-tx_data[3] => output_data.DATAB
-tx_data[3] => output_data.DATAB
-tx_data[4] => output_data.DATAA
-tx_data[4] => output_data.DATAB
-tx_data[4] => output_data.DATAB
-tx_data[5] => output_data.DATAA
-tx_data[5] => output_data.DATAB
-tx_data[5] => output_data.DATAB
-tx_data[6] => output_data.DATAA
-tx_data[6] => output_data.DATAB
-tx_data[6] => output_data.DATAB
-tx_data[7] => output_data.DATAA
-tx_data[7] => output_data.DATAB
-tx_data[7] => output_data.DATAB
-uart_tx_data <= uart_tx_data~reg0.DB_MAX_OUTPUT_PORT_TYPE
-uart_busy <= uart_busy~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|uart|uart_tx:comb_986|clk:comb_3
+|uart|clk:comb_12
 rst => div_1.OUTPUTSELECT
 rst => div_1.OUTPUTSELECT
 rst => div_1.OUTPUTSELECT
@@ -181,7 +150,38 @@ clk => div_2[31].CLK
 clk_out <= clk_out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|uart|clk:comb_995
+|uart|uart_tx:comb_684
+RST_clk => RST_clk.IN1
+RST_n => RST_n.IN1
+tx_data[0] => output_data.DATAA
+tx_data[0] => output_data.DATAB
+tx_data[0] => output_data.DATAB
+tx_data[1] => output_data.DATAA
+tx_data[1] => output_data.DATAB
+tx_data[1] => output_data.DATAB
+tx_data[2] => output_data.DATAA
+tx_data[2] => output_data.DATAB
+tx_data[2] => output_data.DATAB
+tx_data[3] => output_data.DATAA
+tx_data[3] => output_data.DATAB
+tx_data[3] => output_data.DATAB
+tx_data[4] => output_data.DATAA
+tx_data[4] => output_data.DATAB
+tx_data[4] => output_data.DATAB
+tx_data[5] => output_data.DATAA
+tx_data[5] => output_data.DATAB
+tx_data[5] => output_data.DATAB
+tx_data[6] => output_data.DATAA
+tx_data[6] => output_data.DATAB
+tx_data[6] => output_data.DATAB
+tx_data[7] => output_data.DATAA
+tx_data[7] => output_data.DATAB
+tx_data[7] => output_data.DATAB
+uart_tx_data <= uart_tx_data~reg0.DB_MAX_OUTPUT_PORT_TYPE
+uart_busy <= uart_busy~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|uart|uart_tx:comb_684|clk:comb_3
 rst => div_1.OUTPUTSELECT
 rst => div_1.OUTPUTSELECT
 rst => div_1.OUTPUTSELECT

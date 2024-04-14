@@ -32,11 +32,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "RST_clk",
+					"name" : "RST_n",
 					"strict" : false
 				},
 				{
-					"name" : "RST_n",
+					"name" : "RST_clk",
 					"strict" : false
 				},
 				{
