@@ -4,27 +4,43 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "uart_tx_data",
+					"name" : "rx_data[0]",
 					"strict" : false
 				},
 				{
-					"name" : "uart_busy",
+					"name" : "rx_data[1]",
 					"strict" : false
 				},
 				{
-					"name" : "uart_clk_tx",
+					"name" : "rx_data[2]",
 					"strict" : false
 				},
 				{
-					"name" : "clk_out",
+					"name" : "rx_data[3]",
 					"strict" : false
 				},
 				{
-					"name" : "test_put",
+					"name" : "rx_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "rx_data[7]",
 					"strict" : false
 				},
 				{
 					"name" : "RST_n",
+					"strict" : false
+				},
+				{
+					"name" : "uart_rx_data",
 					"strict" : false
 				},
 				{

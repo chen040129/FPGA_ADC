@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at uart.v(32): always construct contains both blocking and non-blocking assignments File: E:/FPGA_FILE/MY_UART/uart.v Line: 32
+Warning (10268): Verilog HDL information at uart_rx.v(28): always construct contains both blocking and non-blocking assignments File: E:/FPGA_FILE/MY_UART/output_files/uart_rx.v Line: 28

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <deploy
- date="2024.04.14.16:46:32"
+ date="2024.04.17.13:51:32"
  outputDirectory="E:/FPGA_FILE/MY_UART/db/ip/SPI/">
  <perimeter>
   <parameter
@@ -133,13 +133,13 @@
  </perimeter>
  <entity
    path=""
-   parameterizationKey="SPI:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE10F17C8,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1713084387,AUTO_UNIQUE_ID=(clock_source:18.0:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(spislave:18.0:AUTO_CLOCK_SINK_CLOCK_RATE=50000000,AUTO_DEVICE_FAMILY=Cyclone IV E,SYNC_DEPTH=2)(clock:18.0:)(reset:18.0:)"
+   parameterizationKey="SPI:1.0:AUTO_CLK_CLOCK_DOMAIN=-1,AUTO_CLK_CLOCK_RATE=-1,AUTO_CLK_RESET_DOMAIN=-1,AUTO_DEVICE=EP4CE10F17C8,AUTO_DEVICE_FAMILY=Cyclone IV E,AUTO_DEVICE_SPEEDGRADE=8,AUTO_GENERATION_ID=1713333087,AUTO_UNIQUE_ID=(clock_source:18.0:clockFrequency=50000000,clockFrequencyKnown=true,inputClockFrequency=0,resetSynchronousEdges=NONE)(spislave:18.0:AUTO_CLOCK_SINK_CLOCK_RATE=50000000,AUTO_DEVICE_FAMILY=Cyclone IV E,SYNC_DEPTH=2)(clock:18.0:)(reset:18.0:)"
    instancePathKey="SPI"
    kind="SPI"
    version="1.0"
    name="SPI">
   <parameter name="AUTO_CLK_CLOCK_RATE" value="-1" />
-  <parameter name="AUTO_GENERATION_ID" value="1713084387" />
+  <parameter name="AUTO_GENERATION_ID" value="1713333087" />
   <parameter name="AUTO_DEVICE" value="EP4CE10F17C8" />
   <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone IV E" />
   <parameter name="AUTO_CLK_RESET_DOMAIN" value="-1" />
@@ -199,11 +199,11 @@
    <message level="Debug" culprit="SPI"><![CDATA["<b>SPI</b>" reuses <b>altera_reset_controller</b> "<b>submodules/altera_reset_controller</b>"]]></message>
    <message level="Debug" culprit="SPI">queue size: 1 starting:spislave "submodules/SPIPhy"</message>
    <message level="Debug">set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files</message>
-   <message level="Debug">Command: E:/intelfpga/18.0/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=E:/intelfpga/18.0/ip/altera/sopc_builder_ip/altera_avalon_spi_phy_slave/spiphyslave.v --source=E:/intelfpga/18.0/ip/altera/sopc_builder_ip/altera_avalon_spi_phy_slave/spiphyslave.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/csy/AppData/Local/Temp/alt9827_3938593968850790323.dir/0002_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on</message>
-   <message level="Debug">Command took 0.831s</message>
+   <message level="Debug">Command: E:/intelfpga/18.0/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=E:/intelfpga/18.0/ip/altera/sopc_builder_ip/altera_avalon_spi_phy_slave/spiphyslave.v --source=E:/intelfpga/18.0/ip/altera/sopc_builder_ip/altera_avalon_spi_phy_slave/spiphyslave.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/csy/AppData/Local/Temp/alt9830_2467280009212536259.dir/0002_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on</message>
+   <message level="Debug">Command took 0.742s</message>
    <message level="Debug">set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files</message>
-   <message level="Debug">Command: E:/intelfpga/18.0/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=E:\intelfpga\18.0\ip\altera\sopc_builder_ip\altera_avalon_spi_phy_slave\spiphyslave.v --source=E:/intelfpga/18.0/ip/altera/sopc_builder_ip/altera_avalon_spi_phy_slave/spiphyslave.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/csy/AppData/Local/Temp/alt9827_3938593968850790323.dir/0003_sopcqmap/ --set=HDL_INTERFACE_INSTANCE_NAME=inst --set=HDL_INTERFACE_INSTANCE_ENTITY=SPIPhy "--set=HDL_INTERFACE_INSTANCE_PARAMETERS=SYNC_DEPTH=D\"2\";" --ini=disable_check_quartus_compatibility_qsys_only=on</message>
-   <message level="Debug">Command took 0.844s</message>
+   <message level="Debug">Command: E:/intelfpga/18.0/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=E:\intelfpga\18.0\ip\altera\sopc_builder_ip\altera_avalon_spi_phy_slave\spiphyslave.v --source=E:/intelfpga/18.0/ip/altera/sopc_builder_ip/altera_avalon_spi_phy_slave/spiphyslave.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/csy/AppData/Local/Temp/alt9830_2467280009212536259.dir/0003_sopcqmap/ --set=HDL_INTERFACE_INSTANCE_NAME=inst --set=HDL_INTERFACE_INSTANCE_ENTITY=SPIPhy "--set=HDL_INTERFACE_INSTANCE_PARAMETERS=SYNC_DEPTH=D\"2\";" --ini=disable_check_quartus_compatibility_qsys_only=on</message>
+   <message level="Debug">Command took 0.977s</message>
    <message level="Info" culprit="spislave_0"><![CDATA["<b>SPI</b>" instantiated <b>spislave</b> "<b>spislave_0</b>"]]></message>
    <message level="Debug" culprit="SPI">queue size: 0 starting:altera_reset_controller "submodules/altera_reset_controller"</message>
    <message level="Info" culprit="rst_controller"><![CDATA["<b>SPI</b>" instantiated <b>altera_reset_controller</b> "<b>rst_controller</b>"]]></message>
@@ -235,11 +235,11 @@
   <messages>
    <message level="Debug" culprit="SPI">queue size: 1 starting:spislave "submodules/SPIPhy"</message>
    <message level="Debug">set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files</message>
-   <message level="Debug">Command: E:/intelfpga/18.0/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=E:/intelfpga/18.0/ip/altera/sopc_builder_ip/altera_avalon_spi_phy_slave/spiphyslave.v --source=E:/intelfpga/18.0/ip/altera/sopc_builder_ip/altera_avalon_spi_phy_slave/spiphyslave.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/csy/AppData/Local/Temp/alt9827_3938593968850790323.dir/0002_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on</message>
-   <message level="Debug">Command took 0.831s</message>
+   <message level="Debug">Command: E:/intelfpga/18.0/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=E:/intelfpga/18.0/ip/altera/sopc_builder_ip/altera_avalon_spi_phy_slave/spiphyslave.v --source=E:/intelfpga/18.0/ip/altera/sopc_builder_ip/altera_avalon_spi_phy_slave/spiphyslave.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/csy/AppData/Local/Temp/alt9830_2467280009212536259.dir/0002_sopcqmap/ --ini=disable_check_quartus_compatibility_qsys_only=on</message>
+   <message level="Debug">Command took 0.742s</message>
    <message level="Debug">set ALTERA_HW_TCL_KEEP_TEMP_FILES=1 to retain temp files</message>
-   <message level="Debug">Command: E:/intelfpga/18.0/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=E:\intelfpga\18.0\ip\altera\sopc_builder_ip\altera_avalon_spi_phy_slave\spiphyslave.v --source=E:/intelfpga/18.0/ip/altera/sopc_builder_ip/altera_avalon_spi_phy_slave/spiphyslave.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/csy/AppData/Local/Temp/alt9827_3938593968850790323.dir/0003_sopcqmap/ --set=HDL_INTERFACE_INSTANCE_NAME=inst --set=HDL_INTERFACE_INSTANCE_ENTITY=SPIPhy "--set=HDL_INTERFACE_INSTANCE_PARAMETERS=SYNC_DEPTH=D\"2\";" --ini=disable_check_quartus_compatibility_qsys_only=on</message>
-   <message level="Debug">Command took 0.844s</message>
+   <message level="Debug">Command: E:/intelfpga/18.0/quartus\bin64/quartus_map.exe not_a_project --generate_hdl_interface=E:\intelfpga\18.0\ip\altera\sopc_builder_ip\altera_avalon_spi_phy_slave\spiphyslave.v --source=E:/intelfpga/18.0/ip/altera/sopc_builder_ip/altera_avalon_spi_phy_slave/spiphyslave.v --set=HDL_INTERFACE_OUTPUT_PATH=C:/Users/csy/AppData/Local/Temp/alt9830_2467280009212536259.dir/0003_sopcqmap/ --set=HDL_INTERFACE_INSTANCE_NAME=inst --set=HDL_INTERFACE_INSTANCE_ENTITY=SPIPhy "--set=HDL_INTERFACE_INSTANCE_PARAMETERS=SYNC_DEPTH=D\"2\";" --ini=disable_check_quartus_compatibility_qsys_only=on</message>
+   <message level="Debug">Command took 0.977s</message>
    <message level="Info" culprit="spislave_0"><![CDATA["<b>SPI</b>" instantiated <b>spislave</b> "<b>spislave_0</b>"]]></message>
   </messages>
  </entity>
