@@ -1,5 +1,5 @@
 
-State Machine - |uart|state
-Name state.state_send 
-state.state_wait 0 
-state.state_send 1 
+State Machine - |uart_rx|cnt
+Name cnt.txd_bit_num 
+cnt.00000000 0 
+cnt.txd_bit_num 1 

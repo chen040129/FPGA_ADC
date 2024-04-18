@@ -7,7 +7,6 @@ module uart_rx(
 );
 
 
-parameter dalay_fance=2000;//延时分频系数，（这里的主时钟是50Mhz）
 parameter all_bit_num=txd_bit_num+2;//总数据位数
 parameter txd_bit_num=8;//需要传输的数据位数
 
@@ -15,6 +14,8 @@ wire uart_clk_rx;
 
 reg [8-1:0] cnt;//统计数据位数
 reg begin_bit;//判断开始帧
+reg [8-1:0] now_data;//用于储存移位数据，在达成指定要求时将数据取出
+
 
 clk(
 	.rst		(RST_n),
@@ -23,29 +24,32 @@ clk(
 ); 
 
 
+
 always @(posedge uart_clk_rx)
 begin
 	if(!RST_n)
 	begin
-		rx_data<=0;
+		rx_data<=8'b11111111;
+		now_data<=8'b11111111;
 		cnt<=0;
 		begin_bit<=1;
 	end
 	else
 	begin
 		if(begin_bit==0)begin
-			//rx_data<=8'b11111111;
-			rx_data<=rx_data<<1;
-			rx_data[0]<=uart_rx_data;
+			now_data<=now_data>>1;
+			now_data[7]<=uart_rx_data;
 			cnt<=cnt+1;
 			if(cnt==txd_bit_num)begin
 				begin_bit<=1;
+				rx_data<=now_data;
+				uart_over<=0;
 			end
 		end
-		
 		if(uart_rx_data==0&&begin_bit==1)begin
 			begin_bit<=0;
 			cnt<=0;
+			uart_over<=1;
 		end
 	end
 

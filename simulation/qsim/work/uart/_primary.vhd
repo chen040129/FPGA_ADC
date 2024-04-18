@@ -10,7 +10,6 @@ entity uart is
         RST_n           : in     vl_logic;
         uart_tx_data    : out    vl_logic;
         uart_busy       : out    vl_logic;
-        uart_clk_tx     : out    vl_logic;
-        clk_out         : out    vl_logic
+        rx_data         : in     vl_logic
     );
 end uart;

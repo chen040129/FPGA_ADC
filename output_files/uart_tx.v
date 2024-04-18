@@ -6,7 +6,6 @@ module uart_tx(
 	output reg uart_busy//传输完一个数据的判断
 );
 
-parameter dalay_fance=2000;//延时分频系数，（这里的主时钟是50Mhz）
 parameter all_bit_num=txd_bit_num+2;//总数据位数
 parameter txd_bit_num=8;//需要传输的数据位数
 parameter stop_bit=1;//停止位的bit值
@@ -62,7 +61,7 @@ begin
 		end
 	else
 		begin
-			uart_tx_data<=uart_tx_data;
+			uart_tx_data<=1;
 			cnt<=0;
 			uart_busy<=0;
 			delay_cnt<=0;
