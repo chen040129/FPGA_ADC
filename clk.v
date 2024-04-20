@@ -1,13 +1,10 @@
-
-
-
 module clk(
 	rst,clk,
 	clk_out
 );
 input rst,clk;
 
-parameter Baud_rate=9600;
+parameter Baud_rate=115200;
 parameter Fdc=50000000/Baud_rate;
 
 
