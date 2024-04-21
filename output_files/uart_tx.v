@@ -35,27 +35,27 @@ begin
 	if(!RST_n)
 	begin
 		uart_tx_data<=1'b0;//按下复位按钮时置高
-		output_data[0]<=start_bit;//将数据位的第0位设置为起始位bit值
+		output_data[0]<=stop_bit;//将数据位的第0位设置为起始位bit值
 		output_data[txd_bit_num:1]<=tx_data;//传入数据
-		output_data[all_bit_num-1]<=stop_bit;//将数据位的第9位设置为结束位bit值
+		output_data[all_bit_num-1]<=start_bit;//将数据位的第9位设置为结束位bit值
 	end
 	else
 	begin
 	uart_tx_data<=1'b1;//按下复位按钮时置高
-	output_data[0]<=start_bit;//将数据位的第0位设置为起始位bit值
+	output_data[0]<=stop_bit;//将数据位的第0位设置为起始位bit值
 	output_data[txd_bit_num:1]<=tx_data;//传入数据
-	output_data[all_bit_num-1]<=stop_bit;//将数据位的第9位设置为结束位bit值
-	if(delay_cnt<10)//延时判定
-	begin
-		delay_cnt<=delay_cnt+1;
-	end
-	else
-	begin
+	output_data[all_bit_num-1]<=start_bit;//将数据位的第9位设置为结束位bit值
+//	if(delay_cnt<10)//延时判定
+//	begin
+//		delay_cnt<=delay_cnt+1;
+//	end
+//	else
+//	begin
 	//下面就是并转串的逻辑
 		if(cnt<all_bit_num)
 		begin
-			uart_tx_data<=output_data[0];
-			output_data<=output_data>>1;
+			uart_tx_data<=output_data[all_bit_num-1];
+			output_data<=output_data<<1;
 			cnt<=cnt+1;
 			uart_busy<=1;
 		end
@@ -67,8 +67,8 @@ begin
 			delay_cnt<=0;
 		end
    end
-	end
 end
+
 
 
 endmodule

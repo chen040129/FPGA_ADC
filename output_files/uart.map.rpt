@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uart
-Sat Apr 20 21:12:53 2024
+Sun Apr 21 17:38:12 2024
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
@@ -57,15 +57,15 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 20 21:12:53 2024           ;
+; Analysis & Synthesis Status        ; Successful - Sun Apr 21 17:38:12 2024           ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
 ; Revision Name                      ; uart                                            ;
 ; Top-level Entity Name              ; uart                                            ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 1,196                                           ;
-;     Total combinational functions  ; 786                                             ;
-;     Dedicated logic registers      ; 887                                             ;
-; Total registers                    ; 887                                             ;
+; Total logic elements               ; 1,117                                           ;
+;     Total combinational functions  ; 707                                             ;
+;     Dedicated logic registers      ; 855                                             ;
+; Total registers                    ; 855                                             ;
 ; Total pins                         ; 28                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 53,248                                          ;
@@ -255,20 +255,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------------------+
 ; Resource                                    ; Usage                    ;
 +---------------------------------------------+--------------------------+
-; Estimated Total logic elements              ; 1,196                    ;
+; Estimated Total logic elements              ; 1,117                    ;
 ;                                             ;                          ;
-; Total combinational functions               ; 786                      ;
+; Total combinational functions               ; 707                      ;
 ; Logic element usage by number of LUT inputs ;                          ;
-;     -- 4 input functions                    ; 319                      ;
-;     -- 3 input functions                    ; 187                      ;
-;     -- <=2 input functions                  ; 280                      ;
+;     -- 4 input functions                    ; 278                      ;
+;     -- 3 input functions                    ; 182                      ;
+;     -- <=2 input functions                  ; 247                      ;
 ;                                             ;                          ;
 ; Logic elements by mode                      ;                          ;
-;     -- normal mode                          ; 591                      ;
-;     -- arithmetic mode                      ; 195                      ;
+;     -- normal mode                          ; 543                      ;
+;     -- arithmetic mode                      ; 164                      ;
 ;                                             ;                          ;
-; Total registers                             ; 887                      ;
-;     -- Dedicated logic registers            ; 887                      ;
+; Total registers                             ; 855                      ;
+;     -- Dedicated logic registers            ; 855                      ;
 ;     -- I/O registers                        ; 0                        ;
 ;                                             ;                          ;
 ; I/O pins                                    ; 28                       ;
@@ -281,8 +281,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                          ;
 ; Maximum fan-out node                        ; altera_internal_jtag~TDO ;
 ; Maximum fan-out                             ; 450                      ;
-; Total fan-out                               ; 5787                     ;
-; Average fan-out                             ; 3.28                     ;
+; Total fan-out                               ; 5476                     ;
+; Average fan-out                             ; 3.31                     ;
 +---------------------------------------------+--------------------------+
 
 
@@ -291,7 +291,7 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                              ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |uart                                                                                                                                   ; 786 (18)            ; 887 (17)                  ; 53248       ; 0            ; 0       ; 0         ; 28   ; 0            ; |uart                                                                                                                                                                                                                                                                                                                                            ; uart                              ; work         ;
+; |uart                                                                                                                                   ; 707 (18)            ; 855 (17)                  ; 53248       ; 0            ; 0       ; 0         ; 28   ; 0            ; |uart                                                                                                                                                                                                                                                                                                                                            ; uart                              ; work         ;
 ;    |AD9226_CLK:comb_3|                                                                                                                  ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|AD9226_CLK:comb_3                                                                                                                                                                                                                                                                                                                          ; AD9226_CLK                        ; work         ;
 ;       |altpll:altpll_component|                                                                                                         ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|AD9226_CLK:comb_3|altpll:altpll_component                                                                                                                                                                                                                                                                                                  ; altpll                            ; work         ;
 ;          |AD9226_CLK_altpll:auto_generated|                                                                                             ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|AD9226_CLK:comb_3|altpll:altpll_component|AD9226_CLK_altpll:auto_generated                                                                                                                                                                                                                                                                 ; AD9226_CLK_altpll                 ; work         ;
@@ -363,7 +363,7 @@ refer to the applicable agreement for further details.
 ;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 26 (26)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                               ; lpm_shiftreg                      ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 23 (23)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                            ; lpm_shiftreg                      ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 30 (30)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                          ; sld_rom_sr                        ; work         ;
-;    |uart_tx:comb_169|                                                                                                                   ; 207 (112)           ; 118 (52)                  ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|uart_tx:comb_169                                                                                                                                                                                                                                                                                                                           ; uart_tx                           ; work         ;
+;    |uart_tx:comb_169|                                                                                                                   ; 128 (33)            ; 86 (20)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|uart_tx:comb_169                                                                                                                                                                                                                                                                                                                           ; uart_tx                           ; work         ;
 ;       |clk:comb_3|                                                                                                                      ; 95 (95)             ; 66 (66)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |uart|uart_tx:comb_169|clk:comb_3                                                                                                                                                                                                                                                                                                                ; clk                               ; work         ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -427,12 +427,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 887   ;
-; Number of registers using Synchronous Clear  ; 125   ;
-; Number of registers using Synchronous Load   ; 69    ;
+; Total registers                              ; 855   ;
+; Number of registers using Synchronous Clear  ; 126   ;
+; Number of registers using Synchronous Load   ; 68    ;
 ; Number of registers using Asynchronous Clear ; 269   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 409   ;
+; Number of registers using Clock Enable       ; 407   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -461,16 +461,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |uart|uart_tx:comb_169|clk:comb_3|div_2[0] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |uart|uart_tx:comb_169|clk:comb_3|div_1[5] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |uart|uart_tx:comb_169|delay_cnt[23]       ;
-; 33:1               ; 6 bits    ; 132 LEs       ; 30 LEs               ; 102 LEs                ; Yes        ; |uart|uart_tx:comb_169|output_data[2]      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |uart|uart_tx:comb_169|clk:comb_3|div_2[20] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |uart|uart_tx:comb_169|clk:comb_3|div_1[19] ;
+; 33:1               ; 6 bits    ; 132 LEs       ; 30 LEs               ; 102 LEs                ; Yes        ; |uart|uart_tx:comb_169|output_data[6]       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 
 
 +-------------------------------------------------------+
@@ -998,25 +997,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 28                          ;
-; cycloneiii_ff         ; 135                         ;
-;     ENA               ; 3                           ;
+; cycloneiii_ff         ; 103                         ;
+;     ENA               ; 1                           ;
 ;     ENA SCLR          ; 8                           ;
-;     SCLR              ; 69                          ;
-;     SLD               ; 1                           ;
-;     plain             ; 54                          ;
-; cycloneiii_lcell_comb ; 225                         ;
-;     arith             ; 104                         ;
-;         2 data inputs ; 104                         ;
-;     normal            ; 121                         ;
+;     SCLR              ; 70                          ;
+;     plain             ; 24                          ;
+; cycloneiii_lcell_comb ; 146                         ;
+;     arith             ; 73                          ;
+;         2 data inputs ; 73                          ;
+;     normal            ; 73                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 6                           ;
-;         2 data inputs ; 17                          ;
-;         3 data inputs ; 16                          ;
-;         4 data inputs ; 81                          ;
+;         2 data inputs ; 15                          ;
+;         3 data inputs ; 11                          ;
+;         4 data inputs ; 40                          ;
 ; cycloneiii_pll        ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 6.00                        ;
-; Average LUT depth     ; 3.52                        ;
+; Max LUT depth         ; 4.10                        ;
+; Average LUT depth     ; 2.85                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1128,37 +1126,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
-    Info: Processing started: Sat Apr 20 21:11:41 2024
+    Info: Processing started: Sun Apr 21 17:37:00 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uart -c uart
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12248): Elaborating Platform Designer system entity "SPI.qsys"
-Info (12250): 2024.04.20.21:11:57 Progress: Loading MY_UART/SPI.qsys
-Info (12250): 2024.04.20.21:11:59 Progress: Reading input file
-Info (12250): 2024.04.20.21:11:59 Progress: Adding clk_0 [clock_source 18.0]
-Info (12250): 2024.04.20.21:12:00 Progress: Parameterizing module clk_0
-Info (12250): 2024.04.20.21:12:00 Progress: Adding spislave_0 [spislave 18.0]
-Info (12250): 2024.04.20.21:12:02 Progress: Parameterizing module spislave_0
-Info (12250): 2024.04.20.21:12:02 Progress: Building connections
-Info (12250): 2024.04.20.21:12:02 Progress: Parameterizing connections
-Info (12250): 2024.04.20.21:12:02 Progress: Validating
-Info (12250): 2024.04.20.21:12:02 Progress: Done reading input file
+Info (12250): 2024.04.21.17:37:16 Progress: Loading MY_UART/SPI.qsys
+Info (12250): 2024.04.21.17:37:18 Progress: Reading input file
+Info (12250): 2024.04.21.17:37:19 Progress: Adding clk_0 [clock_source 18.0]
+Info (12250): 2024.04.21.17:37:19 Progress: Parameterizing module clk_0
+Info (12250): 2024.04.21.17:37:19 Progress: Adding spislave_0 [spislave 18.0]
+Info (12250): 2024.04.21.17:37:21 Progress: Parameterizing module spislave_0
+Info (12250): 2024.04.21.17:37:21 Progress: Building connections
+Info (12250): 2024.04.21.17:37:21 Progress: Parameterizing connections
+Info (12250): 2024.04.21.17:37:21 Progress: Validating
+Info (12250): 2024.04.21.17:37:21 Progress: Done reading input file
 Info (12250): SPI: Generating SPI "SPI" for QUARTUS_SYNTH
 Info (12250): Spislave_0: "SPI" instantiated spislave "spislave_0"
 Info (12250): Rst_controller: "SPI" instantiated altera_reset_controller "rst_controller"
 Info (12250): SPI: Done "SPI" with 3 modules, 5 files
 Info (12249): Finished elaborating Platform Designer system entity "SPI.qsys"
 Info (12248): Elaborating Platform Designer system entity "unnamed.qsys"
-Info (12250): 2024.04.20.21:12:14 Progress: Loading MY_UART/unnamed.qsys
-Info (12250): 2024.04.20.21:12:16 Progress: Reading input file
-Info (12250): 2024.04.20.21:12:16 Progress: Adding clk_0 [clock_source 18.0]
-Info (12250): 2024.04.20.21:12:17 Progress: Parameterizing module clk_0
-Info (12250): 2024.04.20.21:12:17 Progress: Adding rs232_0 [altera_up_avalon_rs232 17.1]
-Info (12250): 2024.04.20.21:12:17 Progress: Parameterizing module rs232_0
-Info (12250): 2024.04.20.21:12:17 Progress: Building connections
-Info (12250): 2024.04.20.21:12:17 Progress: Parameterizing connections
-Info (12250): 2024.04.20.21:12:17 Progress: Validating
-Info (12250): 2024.04.20.21:12:17 Progress: Done reading input file
+Info (12250): 2024.04.21.17:37:33 Progress: Loading MY_UART/unnamed.qsys
+Info (12250): 2024.04.21.17:37:35 Progress: Reading input file
+Info (12250): 2024.04.21.17:37:35 Progress: Adding clk_0 [clock_source 18.0]
+Info (12250): 2024.04.21.17:37:36 Progress: Parameterizing module clk_0
+Info (12250): 2024.04.21.17:37:36 Progress: Adding rs232_0 [altera_up_avalon_rs232 17.1]
+Info (12250): 2024.04.21.17:37:36 Progress: Parameterizing module rs232_0
+Info (12250): 2024.04.21.17:37:36 Progress: Building connections
+Info (12250): 2024.04.21.17:37:36 Progress: Parameterizing connections
+Info (12250): 2024.04.21.17:37:36 Progress: Validating
+Info (12250): 2024.04.21.17:37:36 Progress: Done reading input file
 Info (12250): Unnamed: Generating unnamed "unnamed" for QUARTUS_SYNTH
 Info (12250): Rs232_0: Starting Generation of RS232 UART
 Info (12250): Rs232_0: "unnamed" instantiated altera_up_avalon_rs232 "rs232_0"
@@ -1289,6 +1287,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ad92
 Info (12128): Elaborating entity "AD9226_CLK_altpll" for hierarchy "AD9226_CLK:comb_3|altpll:altpll_component|AD9226_CLK_altpll:auto_generated" File: e:/intelfpga/18.0/quartus/libraries/megafunctions/altpll.tdf Line: 897
 Info (12128): Elaborating entity "clk" for hierarchy "clk:comb_4" File: E:/FPGA_FILE/MY_UART/uart.v Line: 25
 Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:comb_169" File: E:/FPGA_FILE/MY_UART/uart.v Line: 74
+Warning (10036): Verilog HDL or VHDL warning at uart_tx.v(18): object "delay_cnt" assigned a value but never read File: E:/FPGA_FILE/MY_UART/output_files/uart_tx.v Line: 18
 Warning (10230): Verilog HDL assignment warning at uart_tx.v(38): truncated value with size 32 to match size of target (1) File: E:/FPGA_FILE/MY_UART/output_files/uart_tx.v Line: 38
 Warning (10230): Verilog HDL assignment warning at uart_tx.v(40): truncated value with size 32 to match size of target (1) File: E:/FPGA_FILE/MY_UART/output_files/uart_tx.v Line: 40
 Warning (10230): Verilog HDL assignment warning at uart_tx.v(45): truncated value with size 32 to match size of target (1) File: E:/FPGA_FILE/MY_UART/output_files/uart_tx.v Line: 45
@@ -1314,7 +1313,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ngc File: E:/FPGA_FILE/MY_UART/db/cmpr_ngc.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.04.20.21:12:32 Progress: Loading sld23d5e3ab/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.04.21.17:37:52 Progress: Loading sld23d5e3ab/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1356,16 +1355,16 @@ Warning (20013): Ignored 19 assignments for entity "unnamed" -- entity does not 
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 85 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1275 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1196 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 18 input pins
     Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 1215 logic cells
+    Info (21061): Implemented 1136 logic cells
     Info (21064): Implemented 26 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 32 warnings
-    Info: Peak virtual memory: 4913 megabytes
-    Info: Processing ended: Sat Apr 20 21:12:53 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 33 warnings
+    Info: Peak virtual memory: 4908 megabytes
+    Info: Processing ended: Sun Apr 21 17:38:12 2024
     Info: Elapsed time: 00:01:12
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Total CPU time (on all processors): 00:00:24
 
 
