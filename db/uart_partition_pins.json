@@ -12,6 +12,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "FIFO_empty",
+					"strict" : false
+				},
+				{
+					"name" : "FIFO_full",
+					"strict" : false
+				},
+				{
 					"name" : "RST_clk",
 					"strict" : false
 				},
@@ -20,11 +28,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "ad[5]",
+					"name" : "ad[7]",
 					"strict" : false
 				},
 				{
-					"name" : "ad[11]",
+					"name" : "ad[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ad[5]",
 					"strict" : false
 				},
 				{
@@ -32,15 +44,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "ad[10]",
-					"strict" : false
-				},
-				{
 					"name" : "ad[3]",
-					"strict" : false
-				},
-				{
-					"name" : "ad[9]",
 					"strict" : false
 				},
 				{
@@ -48,23 +52,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "ad[8]",
-					"strict" : false
-				},
-				{
 					"name" : "ad[1]",
 					"strict" : false
 				},
 				{
-					"name" : "ad[7]",
-					"strict" : false
-				},
-				{
 					"name" : "ad[0]",
-					"strict" : false
-				},
-				{
-					"name" : "ad[6]",
 					"strict" : false
 				},
 				{

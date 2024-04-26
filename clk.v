@@ -1,5 +1,6 @@
 module clk(
-	rst,clk,
+	rst,
+	clk,
 	clk_out
 );
 input rst,clk;

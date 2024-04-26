@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/18/2024 18:42:37"
+// Generated on "04/22/2024 13:23:38"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          uart
 // 
@@ -31,8 +31,14 @@ module uart_vlg_vec_tst();
 // general purpose registers
 reg RST_clk;
 reg RST_n;
+reg [11:0] ad;
 reg rx_data;
 // wires                                               
+wire Ram_read_data;
+wire ad_clk;
+wire clk;
+wire clk_out;
+wire [7:0] out;
 wire uart_busy;
 wire uart_tx_data;
 
@@ -41,6 +47,12 @@ uart i1 (
 // port map - connection between master ports and signals/registers   
 	.RST_clk(RST_clk),
 	.RST_n(RST_n),
+	.Ram_read_data(Ram_read_data),
+	.ad(ad),
+	.ad_clk(ad_clk),
+	.clk(clk),
+	.clk_out(clk_out),
+	.out(out),
 	.rx_data(rx_data),
 	.uart_busy(uart_busy),
 	.uart_tx_data(uart_tx_data)
@@ -54,59 +66,107 @@ end
 always
 begin
 	RST_clk = 1'b0;
-	RST_clk = #5000 1'b1;
-	#5000;
+	RST_clk = #2500 1'b1;
+	#2500;
 end 
 
 // RST_n
 initial
 begin
 	RST_n = 1'b0;
-	RST_n = #90000 1'b1;
+	RST_n = #160000 1'b1;
+end 
+// ad[ 11 ]
+initial
+begin
+	ad[11] = 1'b0;
+end 
+// ad[ 10 ]
+initial
+begin
+	ad[10] = 1'b0;
+end 
+// ad[ 9 ]
+initial
+begin
+	ad[9] = 1'b0;
+end 
+// ad[ 8 ]
+initial
+begin
+	ad[8] = 1'b0;
+end 
+// ad[ 7 ]
+initial
+begin
+	ad[7] = 1'b0;
+end 
+// ad[ 6 ]
+initial
+begin
+	ad[6] = 1'b0;
+	ad[6] = #640000 1'b1;
+end 
+// ad[ 5 ]
+initial
+begin
+	ad[5] = 1'b0;
+	ad[5] = #320000 1'b1;
+	ad[5] = #320000 1'b0;
+	ad[5] = #320000 1'b1;
+end 
+// ad[ 4 ]
+initial
+begin
+	repeat(3)
+	begin
+		ad[4] = 1'b0;
+		ad[4] = #160000 1'b1;
+		# 160000;
+	end
+	ad[4] = 1'b0;
+end 
+// ad[ 3 ]
+initial
+begin
+	repeat(6)
+	begin
+		ad[3] = 1'b0;
+		ad[3] = #80000 1'b1;
+		# 80000;
+	end
+	ad[3] = 1'b0;
+end 
+// ad[ 2 ]
+initial
+begin
+	repeat(12)
+	begin
+		ad[2] = 1'b0;
+		ad[2] = #40000 1'b1;
+		# 40000;
+	end
+	ad[2] = 1'b0;
+end 
+// ad[ 1 ]
+always
+begin
+	ad[1] = 1'b0;
+	ad[1] = #20000 1'b1;
+	#20000;
+end 
+// ad[ 0 ]
+always
+begin
+	ad[0] = 1'b0;
+	ad[0] = #10000 1'b1;
+	#10000;
 end 
 
 // rx_data
 initial
 begin
-	rx_data = 1'b1;
-	rx_data = #10000 1'b0;
-	rx_data = #30000 1'b1;
-	rx_data = #10000 1'b0;
-	rx_data = #30000 1'b1;
-	rx_data = #20000 1'b0;
-	rx_data = #90000 1'b1;
-	rx_data = #10000 1'b0;
-	rx_data = #10000 1'b1;
-	rx_data = #40000 1'b0;
-	rx_data = #10000 1'b1;
-	rx_data = #60000 1'b0;
-	rx_data = #10000 1'b1;
-	rx_data = #10000 1'b0;
-	rx_data = #10000 1'b1;
-	rx_data = #20000 1'b0;
-	rx_data = #10000 1'b1;
-	rx_data = #20000 1'b0;
-	rx_data = #20000 1'b1;
-	rx_data = #20000 1'b0;
-	rx_data = #10000 1'b1;
-	rx_data = #60000 1'b0;
-	rx_data = #60000 1'b1;
-	rx_data = #20000 1'b0;
-	rx_data = #50000 1'b1;
-	rx_data = #80000 1'b0;
-	rx_data = #20000 1'b1;
-	rx_data = #40000 1'b0;
-	rx_data = #10000 1'b1;
-	rx_data = #30000 1'b0;
-	rx_data = #20000 1'b1;
-	rx_data = #20000 1'b0;
-	rx_data = #10000 1'b1;
-	rx_data = #20000 1'b0;
-	rx_data = #10000 1'b1;
-	rx_data = #20000 1'b0;
-	rx_data = #10000 1'b1;
-	rx_data = #40000 1'b0;
-	rx_data = #10000 1'b1;
+	rx_data = 1'b0;
 end 
 endmodule
 
