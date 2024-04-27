@@ -1,5 +1,5 @@
 Analysis & Synthesis report for uart
-Fri Apr 26 17:01:52 2024
+Fri Apr 26 18:24:27 2024
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
@@ -69,7 +69,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 26 17:01:52 2024           ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 26 18:24:26 2024           ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
 ; Revision Name                      ; uart                                            ;
 ; Top-level Entity Name              ; uart                                            ;
@@ -1435,37 +1435,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
-    Info: Processing started: Fri Apr 26 16:59:55 2024
+    Info: Processing started: Fri Apr 26 18:22:25 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off uart -c uart
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
 Info (12248): Elaborating Platform Designer system entity "SPI.qsys"
-Info (12250): 2024.04.26.17:00:21 Progress: Loading MY_UART/SPI.qsys
-Info (12250): 2024.04.26.17:00:25 Progress: Reading input file
-Info (12250): 2024.04.26.17:00:25 Progress: Adding clk_0 [clock_source 18.0]
-Info (12250): 2024.04.26.17:00:26 Progress: Parameterizing module clk_0
-Info (12250): 2024.04.26.17:00:26 Progress: Adding spislave_0 [spislave 18.0]
-Info (12250): 2024.04.26.17:00:28 Progress: Parameterizing module spislave_0
-Info (12250): 2024.04.26.17:00:28 Progress: Building connections
-Info (12250): 2024.04.26.17:00:28 Progress: Parameterizing connections
-Info (12250): 2024.04.26.17:00:28 Progress: Validating
-Info (12250): 2024.04.26.17:00:28 Progress: Done reading input file
+Info (12250): 2024.04.26.18:22:52 Progress: Loading MY_UART/SPI.qsys
+Info (12250): 2024.04.26.18:22:55 Progress: Reading input file
+Info (12250): 2024.04.26.18:22:56 Progress: Adding clk_0 [clock_source 18.0]
+Info (12250): 2024.04.26.18:22:57 Progress: Parameterizing module clk_0
+Info (12250): 2024.04.26.18:22:57 Progress: Adding spislave_0 [spislave 18.0]
+Info (12250): 2024.04.26.18:22:59 Progress: Parameterizing module spislave_0
+Info (12250): 2024.04.26.18:22:59 Progress: Building connections
+Info (12250): 2024.04.26.18:22:59 Progress: Parameterizing connections
+Info (12250): 2024.04.26.18:22:59 Progress: Validating
+Info (12250): 2024.04.26.18:22:59 Progress: Done reading input file
 Info (12250): SPI: Generating SPI "SPI" for QUARTUS_SYNTH
 Info (12250): Spislave_0: "SPI" instantiated spislave "spislave_0"
 Info (12250): Rst_controller: "SPI" instantiated altera_reset_controller "rst_controller"
 Info (12250): SPI: Done "SPI" with 3 modules, 5 files
 Info (12249): Finished elaborating Platform Designer system entity "SPI.qsys"
 Info (12248): Elaborating Platform Designer system entity "unnamed.qsys"
-Info (12250): 2024.04.26.17:00:48 Progress: Loading MY_UART/unnamed.qsys
-Info (12250): 2024.04.26.17:00:51 Progress: Reading input file
-Info (12250): 2024.04.26.17:00:51 Progress: Adding clk_0 [clock_source 18.0]
-Info (12250): 2024.04.26.17:00:52 Progress: Parameterizing module clk_0
-Info (12250): 2024.04.26.17:00:52 Progress: Adding rs232_0 [altera_up_avalon_rs232 17.1]
-Info (12250): 2024.04.26.17:00:53 Progress: Parameterizing module rs232_0
-Info (12250): 2024.04.26.17:00:53 Progress: Building connections
-Info (12250): 2024.04.26.17:00:53 Progress: Parameterizing connections
-Info (12250): 2024.04.26.17:00:53 Progress: Validating
-Info (12250): 2024.04.26.17:00:53 Progress: Done reading input file
+Info (12250): 2024.04.26.18:23:19 Progress: Loading MY_UART/unnamed.qsys
+Info (12250): 2024.04.26.18:23:22 Progress: Reading input file
+Info (12250): 2024.04.26.18:23:22 Progress: Adding clk_0 [clock_source 18.0]
+Info (12250): 2024.04.26.18:23:23 Progress: Parameterizing module clk_0
+Info (12250): 2024.04.26.18:23:23 Progress: Adding rs232_0 [altera_up_avalon_rs232 17.1]
+Info (12250): 2024.04.26.18:23:24 Progress: Parameterizing module rs232_0
+Info (12250): 2024.04.26.18:23:24 Progress: Building connections
+Info (12250): 2024.04.26.18:23:24 Progress: Parameterizing connections
+Info (12250): 2024.04.26.18:23:24 Progress: Validating
+Info (12250): 2024.04.26.18:23:24 Progress: Done reading input file
 Info (12250): Unnamed: Generating unnamed "unnamed" for QUARTUS_SYNTH
 Info (12250): Rs232_0: Starting Generation of RS232 UART
 Info (12250): Rs232_0: "unnamed" instantiated altera_up_avalon_rs232 "rs232_0"
@@ -1522,9 +1522,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ip/u
     Info (12023): Found entity 1: unnamed File: E:/FPGA_FILE/MY_UART/db/ip/unnamed/unnamed.v Line: 6
 Critical Warning (10846): Verilog HDL Instantiation warning at uart.v(19): instance has no name File: E:/FPGA_FILE/MY_UART/uart.v Line: 19
 Critical Warning (10846): Verilog HDL Instantiation warning at uart.v(25): instance has no name File: E:/FPGA_FILE/MY_UART/uart.v Line: 25
-Critical Warning (10846): Verilog HDL Instantiation warning at uart.v(70): instance has no name File: E:/FPGA_FILE/MY_UART/uart.v Line: 70
+Critical Warning (10846): Verilog HDL Instantiation warning at uart.v(62): instance has no name File: E:/FPGA_FILE/MY_UART/uart.v Line: 62
 Critical Warning (10846): Verilog HDL Instantiation warning at uart_tx.v(24): instance has no name File: E:/FPGA_FILE/MY_UART/output_files/uart_tx.v Line: 24
-Critical Warning (10846): Verilog HDL Instantiation warning at uart.v(110): instance has no name File: E:/FPGA_FILE/MY_UART/uart.v Line: 110
+Critical Warning (10846): Verilog HDL Instantiation warning at uart.v(85): instance has no name File: E:/FPGA_FILE/MY_UART/uart.v Line: 85
 Critical Warning (10846): Verilog HDL Instantiation warning at uart_rx.v(24): instance has no name File: E:/FPGA_FILE/MY_UART/output_files/uart_rx.v Line: 24
 Critical Warning (10846): Verilog HDL Instantiation warning at spi_tx.v(23): instance has no name File: E:/FPGA_FILE/MY_UART/spi_tx.v Line: 23
 Critical Warning (10846): Verilog HDL Instantiation warning at spi_rx.v(24): instance has no name File: E:/FPGA_FILE/MY_UART/spi_rx.v Line: 24
@@ -1598,7 +1598,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ad92
     Info (12023): Found entity 1: AD9226_CLK_altpll File: E:/FPGA_FILE/MY_UART/db/ad9226_clk_altpll.v Line: 29
 Info (12128): Elaborating entity "AD9226_CLK_altpll" for hierarchy "AD9226_CLK:comb_3|altpll:altpll_component|AD9226_CLK_altpll:auto_generated" File: e:/intelfpga/18.0/quartus/libraries/megafunctions/altpll.tdf Line: 897
 Info (12128): Elaborating entity "clk" for hierarchy "clk:comb_4" File: E:/FPGA_FILE/MY_UART/uart.v Line: 25
-Info (12128): Elaborating entity "ADC_FIFO" for hierarchy "ADC_FIFO:comb_79" File: E:/FPGA_FILE/MY_UART/uart.v Line: 70
+Info (12128): Elaborating entity "ADC_FIFO" for hierarchy "ADC_FIFO:comb_79" File: E:/FPGA_FILE/MY_UART/uart.v Line: 62
 Info (12128): Elaborating entity "dcfifo" for hierarchy "ADC_FIFO:comb_79|dcfifo:dcfifo_component" File: E:/FPGA_FILE/MY_UART/ADC_FIFO.v Line: 88
 Info (12130): Elaborated megafunction instantiation "ADC_FIFO:comb_79|dcfifo:dcfifo_component" File: E:/FPGA_FILE/MY_UART/ADC_FIFO.v Line: 88
 Info (12133): Instantiated megafunction "ADC_FIFO:comb_79|dcfifo:dcfifo_component" with the following parameter: File: E:/FPGA_FILE/MY_UART/ADC_FIFO.v Line: 88
@@ -1649,7 +1649,7 @@ Info (12128): Elaborating entity "dffpipe_0f9" for hierarchy "ADC_FIFO:comb_79|d
 Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_t76.tdf
     Info (12023): Found entity 1: cmpr_t76 File: E:/FPGA_FILE/MY_UART/db/cmpr_t76.tdf Line: 22
 Info (12128): Elaborating entity "cmpr_t76" for hierarchy "ADC_FIFO:comb_79|dcfifo:dcfifo_component|dcfifo_ovo1:auto_generated|cmpr_t76:rdempty_eq_comp" File: E:/FPGA_FILE/MY_UART/db/dcfifo_ovo1.tdf Line: 60
-Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:comb_87" File: E:/FPGA_FILE/MY_UART/uart.v Line: 110
+Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:comb_87" File: E:/FPGA_FILE/MY_UART/uart.v Line: 85
 Warning (10036): Verilog HDL or VHDL warning at uart_tx.v(18): object "delay_cnt" assigned a value but never read File: E:/FPGA_FILE/MY_UART/output_files/uart_tx.v Line: 18
 Warning (10230): Verilog HDL assignment warning at uart_tx.v(38): truncated value with size 32 to match size of target (1) File: E:/FPGA_FILE/MY_UART/output_files/uart_tx.v Line: 38
 Warning (10230): Verilog HDL assignment warning at uart_tx.v(40): truncated value with size 32 to match size of target (1) File: E:/FPGA_FILE/MY_UART/output_files/uart_tx.v Line: 40
@@ -1678,7 +1678,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_ngc File: E:/FPGA_FILE/MY_UART/db/cmpr_ngc.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2024.04.26.17:01:20 Progress: Loading sld23d5e3ab/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2024.04.26.18:23:51 Progress: Loading sld23d5e3ab/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1739,8 +1739,8 @@ Info (21057): Implemented 1682 device resources after synthesis - the final reso
     Info (21065): Implemented 1 PLLs
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 45 warnings
     Info: Peak virtual memory: 4921 megabytes
-    Info: Processing ended: Fri Apr 26 17:01:52 2024
-    Info: Elapsed time: 00:01:57
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Processing ended: Fri Apr 26 18:24:27 2024
+    Info: Elapsed time: 00:02:02
+    Info: Total CPU time (on all processors): 00:00:22
 
 

@@ -1,5 +1,5 @@
 Fitter report for uart
-Fri Apr 26 17:02:04 2024
+Fri Apr 26 18:24:39 2024
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
@@ -69,7 +69,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Fri Apr 26 17:02:04 2024           ;
+; Fitter Status                      ; Successful - Fri Apr 26 18:24:39 2024           ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
 ; Revision Name                      ; uart                                            ;
 ; Top-level Entity Name              ; uart                                            ;
@@ -156,19 +156,19 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 16          ;
 ; Maximum allowed            ; 16          ;
 ;                            ;             ;
-; Average used               ; 1.31        ;
+; Average used               ; 1.34        ;
 ; Maximum used               ; 16          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   2.4%      ;
-;     Processor 3            ;   2.2%      ;
-;     Processor 4            ;   2.2%      ;
-;     Processor 5            ;   2.1%      ;
-;     Processor 6            ;   2.1%      ;
-;     Processor 7            ;   2.1%      ;
-;     Processor 8            ;   2.0%      ;
-;     Processors 9-16        ;   2.0%      ;
+;     Processor 2            ;   2.6%      ;
+;     Processor 3            ;   2.5%      ;
+;     Processor 4            ;   2.4%      ;
+;     Processor 5            ;   2.4%      ;
+;     Processor 6            ;   2.3%      ;
+;     Processor 7            ;   2.3%      ;
+;     Processor 8            ;   2.2%      ;
+;     Processors 9-16        ;   2.2%      ;
 +----------------------------+-------------+
 
 
@@ -1569,7 +1569,7 @@ Warning (15064): PLL "AD9226_CLK:comb_3|altpll:altpll_component|AD9226_CLK_altpl
 Warning (15064): PLL "AD9226_CLK:comb_3|altpll:altpll_component|AD9226_CLK_altpll:auto_generated|pll1" output port clk[1] feeds output pin "clk~output" via non-dedicated routing -- jitter performance depends on switching rate of other design elements. Use PLL dedicated clock outputs to ensure jitter performance File: E:/FPGA_FILE/MY_UART/db/ad9226_clk_altpll.v Line: 43
 Warning (15705): Ignored locations or region assignments to the following nodes
     Warning (15706): Node "clk_out" is assigned to location or region, but does not exist in design
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:02
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:03
 Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
@@ -1583,7 +1583,7 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.59 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.60 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1592,8 +1592,8 @@ Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:02
 Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments panel in the Fitter Compilation Report for more information.
 Info (144001): Generated suppressed messages file E:/FPGA_FILE/MY_UART/output_files/uart.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 17 warnings
-    Info: Peak virtual memory: 6534 megabytes
-    Info: Processing ended: Fri Apr 26 17:02:06 2024
+    Info: Peak virtual memory: 6535 megabytes
+    Info: Processing ended: Fri Apr 26 18:24:40 2024
     Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:03
 

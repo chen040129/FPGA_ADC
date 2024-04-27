@@ -41,19 +41,11 @@ begin
 		arry[0]<=8'd0;
 		arry[1]  <=8'h0A;
 		i <= 8'd0;
-//		Ram_addr<={10{1'b0}};
-//		$deposit(arr, arry);
 	end
 	else
 	begin
 		begin
-//			Ram_addr<=Ram_addr+1'b1;
 			arry[0]  <= {ad[0],ad[1],ad[2],ad[3],ad[4],ad[5],ad[6],ad[7]};
-//				if(arry[i]==8'h0A)
-//				begin
-//					i<=0;
-//				end
-//				i <= i + 1'b1;
 		end
 	end
 end
@@ -69,14 +61,6 @@ ADC_FIFO (
 
 );
 
-//ADC_RAM (
-//	.address   (Ram_addr),
-//	.clock     (clk),
-//	.data      (arry[i]),
-//	.rden      (uart_busy),
-//	.wren      (write_en),
-//	.q         (Ram_read_data)
-//);
 
 
 always @(posedge ad_clk)
@@ -92,15 +76,6 @@ begin
 	end
 end
 
-
-//uart_rx(
-//	.RST_clk      (RST_clk),//系统时钟
-//	.RST_n        (RST_n),//系统复位键
-//	.uart_rx_data (rx_data),//输入的接口
-//	.rx_data      (out),//接收到的数据
-//	.uart_over    ()//传输完一个数据的判断
-//);
-//
 uart_tx(
 	.RST_clk        (RST_clk),
 	.RST_n          (RST_n),
@@ -108,18 +83,6 @@ uart_tx(
 	.uart_tx_data   (uart_tx_data),//输出的接口
 	.uart_busy      (uart_busy)//传输完一个数据的判断
 );
-
-
-
-//spi_tx(
-//	.RST_clk        (RST_clk),
-//	.RST_n          (RST_n),
-//	.tx_data			 (8'b10101010),//传入的8位数据，需要可以修改
-//	.spi_tx_data   (uart_tx_data),//输出的接口
-//	.spi_busy      (uart_busy),//传输完一个数据的判断
-//	.spi_clk        (clk_out)
-//);
-
 
 
 
